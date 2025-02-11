@@ -1,0 +1,129 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?attr/colorPrimary"
+    android:gravity="center_vertical">
+
+    <!-- Línea horizontal en la parte superior -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Contenedor horizontal para el TextView y Button -->
+    <LinearLayout
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+
+        <!-- TextView para mostrar el temporizador -->
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:text="@string/_00_00_00"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Botón para iniciar/pausar el temporizador -->
+        <ImageButton
+            android:id="@+id/buttonStartPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_timer_play"
+            android:background="@null"
+            android:contentDescription="@string/playOrPause"/>
+
+        <!-- Botón para stopear el temporizador -->
+        <ImageButton
+            android:id="@+id/buttonStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_timer_stop"
+            android:background="@null"
+            android:contentDescription="@string/stop"/>
+
+        <!-- Botón para cambiar el sonido del temporizador -->
+        <ImageButton
+            android:id="@+id/buttonSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_timer_sound"
+            android:background="@null"
+            android:layout_marginStart="2dp"
+            android:contentDescription="@string/sound"/>
+
+
+
+
+
+        <!-- Separador de funcionalidades de timers -->
+        <ImageButton
+            android:id="@+id/timerSeparator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_timer_separator"
+            android:background="@null"
+            android:contentDescription="@string/hide_timer_to_all"
+            android:layout_marginStart="-2dp"
+            android:layout_marginEnd="-6dp"/>
+
+
+
+
+
+        <!-- Botón para reproducir todos los timers -->
+        <ImageButton
+            android:id="@+id/playAllTimers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_timer_play"
+            android:contentDescription="@string/hide_timer_to_all"/>
+
+        <!-- Botón para pausar todos los timers -->
+        <ImageButton
+            android:id="@+id/pauseAllTimers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_timer_pause"
+            android:background="@null"
+            android:contentDescription="@string/hide_timer_to_all"/>
+
+        <!-- Botón para stopear todos los timers -->
+        <ImageButton
+            android:id="@+id/stopAllTimers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_timer_stop"
+            android:background="@null"
+            android:contentDescription="@string/hide_timer_to_all"/>
+
+        <!-- Botón para cambiar el sonido de todos los timers -->
+        <ImageButton
+            android:id="@+id/changeAllTimerSounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_timer_sound"
+            android:background="@null"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@string/hide_timer_to_all"/>
+
+        <!-- Botón para esconder timers -->
+        <ImageButton
+            android:id="@+id/hideAllTimers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_timer_hide_timer"
+            android:background="@null"
+            android:contentDescription="@string/hide_timer_to_all"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+</LinearLayout>

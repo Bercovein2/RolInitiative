@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="grayBlack">#FF252222</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="darkGreen">#008B00</color>
+    <color name="darkRed">#FFFF4D4D</color>
+    <color name="darkGray">#FF656565</color>
+    <color name="disabledDarkGray">#FF1C1B1C</color>
+    <color name="disabledLightGray">#E2E2E3</color>
+    <color name="disabledDarkGrayVector">#686768</color>
+    <color name="disabledLightGrayVector">#9C9C9C</color>
+    <color name="lightGray">#9C9C9C</color>
+    <color name="lightBrown">#c99868</color>
+    <color name="RI_red">#eb4334</color>
+    <color name="RI_green">#35a853</color>
+    <color name="RI_yellow">#fabc04</color>
+    <color name="RI_blue">#4384f5</color>
+</resources>

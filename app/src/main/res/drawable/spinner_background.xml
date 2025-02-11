@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="4dp"/> <!-- Esquinas redondeadas -->
+    <stroke android:width="3dp" android:color="@color/disabledLightGrayVector"/> <!-- Borde gris claro -->
+</shape>

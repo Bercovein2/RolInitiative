@@ -1,0 +1,230 @@
+<resources>
+    <string name="action_settings">Configuración</string>
+
+    <!-- ENCABEZADOS -->
+    <string name="headerName">Nombre</string>
+    <string name="headerArmorClass">Armadura</string>
+    <string name="headerLife">Vida</string>
+    <string name="headerInit">Inic.</string>
+    <string name="headerKill">Matar</string>
+
+    <!-- BOTONES -->
+    <string name="next">Siguiente</string>
+    <string name="start">Iniciar</string>
+    <string name="clear">Limpiar</string>
+    <string name="clean">Limpiar</string>
+    <string name="restart">Reiniciar</string>
+    <string name="sort">Ordenar</string>
+    <string name="add">Añadir</string>
+    <string name="addToFight">¡Ir a la batalla!</string>
+
+    <!-- ENTRADAS -->
+    <string name="enterGameName">Introduce el nombre del juego</string>
+    <string name="enterName">*Introduce el nombre</string>
+    <string name="enterLife">Vida</string>
+    <string name="enterArmorClass">Armadura</string>
+    <string name="enterInit">*Iniciativa</string>
+
+    <string name="gameName">Juego:</string>
+
+    <!-- MODO TEMA -->
+    <string name="toggle_theme">Cambiar Tema</string>
+
+    <!-- ELIMINAR -->
+    <string name="delete_character">Eliminar</string>
+
+    <string name="timer_character">Temporizador</string>
+
+    <!-- MATAR -->
+    <string name="kill_character">Matar</string>
+
+    <!-- POPUP INFO -->
+    <string name="show_popup_info">Mostrar Información</string>
+    <string name="close_popup">Cerrar</string>
+
+    <!-- POPUP Notas -->
+    <string name="show_popup_notes">Mostrar Notas</string>
+
+    <!-- Temporizador -->
+    <string name="show_timer">Mostrar Temporizador</string>
+
+    <string name="close_folders">Cerrar ventana emergente</string>
+    <string name="add_folders">Añadir carpeta</string>
+
+    <!-- Botones del Temporizador -->
+    <string name="playOrPause">Reproducir o Pausar</string>
+    <string name="stop">Detener</string>
+
+    <string name="play">Reproducir</string>
+    <string name="pause">Pausar</string>
+
+    <string name="sound">Sonido</string>
+
+    <!-- Notas de Carpeta -->
+    <string name="show_folders">Mostrar Carpetas</string>
+
+    <!-- LIMPIAR LISTA -->
+    <string name="add_all_to_folder">Guardar todo</string>
+    <string name="add_sounds_to_timers">Añadir sonidos al temporizador</string>
+
+    <!-- LANZAR DADO -->
+    <string name="roll_dice">Lanzar</string>
+
+    <!-- STRINGS DE INFORMACIÓN -->
+    <string name="infoTitle">Información</string>
+    <string name="addDescription">Añadir jugador/NPC a la lista con nombre, iniciativa y vida (opcional)</string>
+    <string name="sortDescription">Reordenar la lista según la iniciativa en orden descendente</string>
+    <string name="clearDescription">Vaciar la lista completamente</string>
+    <string name="addAllDescription">Añadir la pelea actual a una carpeta</string>
+    <string name="folderDescription">Organiza tus personajes en carpetas</string>
+    <string name="startDescription">Comenzar turnos indicando en verde al jugador/NPC que debe jugar</string>
+    <string name="nextDescription">Avanzar turno al siguiente jugador mientras esté vivo</string>
+    <string name="deleteDescription">Eliminar un jugador/NPC de la lista</string>
+    <string name="onHoldDescription">Puedes mantener presionado el nombre del personaje para ver más opciones. También puedes mantener presionado otras columnas para editarlas.</string>
+    <string name="increaseReduceDescription">Aumentar o disminuir la vida con un máximo de 4 dígitos</string>
+    <string name="killDescription">Matar/revivir un jugador/NPC. Si está muerto, no tendrá turnos en la ronda hasta que sea eliminado o revivido</string>
+    <string name="restartDescription">Reiniciar la ronda de turnos y muertes</string>
+    <string name="notesDescription">Permite guardar notas sobre la partida</string>
+    <string name="diceDescription">Permite lanzar dados virtuales</string>
+    <string name="darkThemeDescription">Cambiar a modo oscuro</string>
+    <string name="lightThemeDescription">Cambiar a modo claro</string>
+
+    <!-- UTILIZA TU PROPIO SET -->
+    <string name="useYourOwnDices">No hagas trampa,
+ usa tu propio set</string>
+    <string name="write_your_notes_here">Escribe tus notas aquí…</string>
+    <string name="notes">Notas</string>
+
+    <string name="round">Ronda:</string>
+    <string name="killRevive">Matar/Revivir</string>
+    <string name="editCharacter">Editar</string>
+    <string name="saveCharacter">Guardar en carpeta</string>
+    <string name="navigation_drawer_open">Abrir</string>
+    <string name="navigation_drawer_close">Cerrar</string>
+    <string name="theme">Tema</string>
+    <string name="language">Idioma</string>
+    <string name="info">Información</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="menu_title">Menú</string>
+
+    <string name="buttonPatchNote">Notas de versión</string>
+    <string name="patchNotesTitle">¿Qué hay de nuevo?</string>
+
+    <string name="patchGreetings">¡Gracias por usar la aplicación!</string>
+
+    <string name="greetingsTitle">Esto no hubiera sido posible sin mis amigos...</string>
+    <string name="appGreetings">Gracias por el apoyo!</string>
+    <string name="save_buttons">Guardar</string>
+    <string name="cancel_buttons">Cancelar</string>
+    <string name="close_buttons">Cerrar</string>
+
+    <string name="life_of">Vida de:</string>
+    <string name="armor_of">Armadura de:</string>
+    <string name="initiative_of">Iniciativa de:</string>
+
+
+    <string name="buttonRateUs">Califícanos!</string>
+    <string name="buttonSuggestAnIdea">Sugerir!</string>
+
+
+    <string name="mailSubject">Tengo una sugerencia!</string>
+    <string name="mailDescription">Si tenes algo para compartir o nuevas ideas, envialas!</string>
+    <string name="myFolders">Mis Carpetas</string>
+    <string name="folderSelector">Carpeta: </string>
+    <string name="enterFolderName">Ingresar nombre de la carpeta…</string>
+    <string name="create_button">Crear</string>
+    <string name="select_folder">Seleccionar carpeta</string>
+    <string name="also_delete_selected_folders">También borrar carpetas seleccionadas</string>
+    <string name="are_you_sure_you_want_to_delete">ASeguro quieres eliminar?</string>
+    <string name="dices">Lanzar un dado</string>
+    <string name="flat_footed_armor">Armadura desprevenido:</string>
+    <string name="touch_armor">Armadura de toque:</string>
+    <string name="armor_class_ac">Clase de armadura (AC):</string>
+    <string name="initiative">Iniciativa:</string>
+    <string name="life">Vida:</string>
+    <string name="name">Nombre:</string>
+    <string name="edit_character">Editar personaje</string>
+    <string name="clear_timer">Limpiar temporizador</string>
+    <string name="hide_timer_to_all">Esconder todos los temporizadores</string>
+    <string name="cancel">Cancelar</string>
+    <string name="are_you_sure">Estas seguro de ocultar todos los temporizadores?</string>
+    <string name="set_timer">Establecer temporizador de la sesión</string>
+    <string name="set_character_timer">Establecer temporizador del personaje</string>
+    <string name="add_new_sound">Añadir sonido mp3…</string>
+    <string name="sound_name">Nombre del sonido</string>
+    <string name="select_language">Seleccionar idioma</string>
+    <string name="editFolderName">Editar nombre de la carpeta</string>
+    <string name="note_saved">Nota guardada</string>
+    <string name="create_new_folder">Crear nueva carpeta</string>
+    <string name="confirm_action">Confirmar acción</string>
+    <string name="send_to_fight_message">¿Quieres agregar %d personajes a la pelea actual?</string>
+    <string name="accept_buttons">Aceptar</string>
+    <string name="text_coppied_to_clipboard">Texto copiado al portapapeles</string>
+    <string name="no_character_selected">No hay personajes seleccionados</string>
+    <string name="timer_finished">¡Cronómetro terminado!</string>
+    <string name="number_deleted_items">%d elementos eliminados</string>
+    <string name="enter_name_and_initiative">Por favor ingresa el nombre y la iniciativa (la armadura y la vida son opcionales)</string>
+    <string name="set_valid_timer_first">¡Primero configure un temporizador válido!</string>
+    <string name="current_fight_cleaned">La pelea actual fue limpiada.</string>
+    <string name="session_timer_started">¡El cronómetro de la sesión comenzó!</string>
+    <string name="session_timer_paused">¡Cronómetro de sesión en pausa!</string>
+    <string name="session_timer_stoped">¡El cronómetro de la sesión se detuvo!</string>
+    <string name="spanish">Español</string>
+    <string name="english">Inglés</string>
+    <string name="italian">Italiano</string>
+    <string name="all_character_timer_stopped">¡Todos los cronómetros de los personajes se detuvieron!</string>
+    <string name="new_folder_created">Nueva carpeta creada</string>
+    <string name="folder_name_in_use">Nombre ya tomado, por favor use otro</string>
+    <string name="new_sound_added">¡Nuevo sonido agregado!</string>
+    <string name="invalid_time">Tiempo no válido</string>
+    <string name="manage_sound_for_all_characters">Administrar el temporizador de sonido para TODOS los personajes.</string>
+    <string name="selected_no_sound">Seleccionado: Sin sonido</string>
+    <string name="name_cannot_be_empty">El nombre no puede estar vacío</string>
+    <string name="all_character_timer_paused">¡Todos los cronómetros de personajes se pausaron!</string>
+    <string name="all_character_timer_started">¡Todos los cronómetros de personajes comenzaron!</string>
+    <string name="no_character_timer">Ningún personaje con temporizador.</string>
+    <string name="folder_not_found">Carpeta no encontrada</string>
+    <string name="folder_position_not_found">Posición de la carpeta no encontrada</string>
+    <string name="character_not_found_in_folder">Personaje no encontrado en la carpeta.</string>
+    <string name="enter_name_armor_and_life_optional">Por favor ingresa el nombre (la armadura y la vida son opcionales)</string>
+    <string name="character_saved_in_folder">Personaje guardado en carpeta.</string>
+    <string name="character_cant_save_in_folder">No se puede guardar en la carpeta</string>
+    <string name="create_folder_first">Crea una carpeta primero</string>
+    <string name="no_character_to_add">No hay personajes para agregar</string>
+    <string name="manage_session_sound_timer">Administrar el temporizador de sonido de la sesión</string>
+    <string name="sound_deleted">Sonido eliminado</string>
+    <string name="all_character_saved_in_folder">Todos los personajes guardados en la carpeta.</string>
+    <string name="folder_doesnt_exist">La carpeta no existe</string>
+    <string name="would_you_like_to_add_characters">¿Quieres agregar %d personajes a la pelea actual?</string>
+    <string name="characters_added_to_actual_fight">%d personajes agregados a la pelea real</string>
+    <string name="character_edited">Personaje %d editado</string>
+    <string name="folder_updated">Carpeta actualizada</string>
+    <string name="selected">"Seleccionado: "</string>
+    <string name="armor_edited">Armadura de %d editada</string>
+    <string name="initiative_edited">Iniciativa de %d editada</string>
+    <string name="timer_set_to">Temporizador configurado en %d</string>
+    <string name="life_edited">Vida de %d editado</string>
+    <string name="manage_sound_timer_for">Administrar el temporizador de sonido para %d</string>
+    <string name="are_you_sure_to_clear_character_list">¿Estás seguro de que quieres borrar la lista de personajes? \\nRecuerda: solo borrará la pelea real, no los personajes en las carpetas.</string>
+    <string name="add_button">Botón Agregar</string>
+    <string name="add_button_desc">Escribe y agrega las estadísticas de tu personaje a la batalla actual.</string>
+    <string name="hold_tap">Mantener pulsado...</string>
+    <string name="hold_tap_desc">...en cada estadística para editar o en el nombre del personaje para ver más opciones como matar, eliminar, editar, guardar, etc.</string>
+    <string name="sort_button">Botón Ordenar</string>
+    <string name="sort_button_desc">Ordena dos o más personajes en batalla según su iniciativa</string>
+    <string name="start_next_button">Botón Iniciar/Siguiente</string>
+    <string name="start_next_button_desc">Inicia el conteo de turnos. Una vez iniciado, avance el cursor presionando Siguiente</string>
+    <string name="restart_button">Botón Reiniciar</string>
+    <string name="restart_button_desc">Si ya comenzaste una batalla, puedes reiniciarla cuando lo necesites</string>
+    <string name="folder_button">Botón de Carpeta</string>
+    <string name="folder_button_desc">Crea y prepara tus personajes en carpetas antes de tu próxima sesión.</string>
+    <string name="note_button">Botón de Nota</string>
+    <string name="note_button_desc">Escribe un resumen de la pelea, una introducción o cualquier detalle que te ayude para la próxima sesión.</string>
+    <string name="dice_button">Botón de Dados</string>
+    <string name="dice_button_desc">¿No tienes dados físicos? No te preocupes, puedes usar dados virtuales</string>
+    <string name="timer_button">Botón de Temporizador</string>
+    <string name="timer_button_desc">Muestra u oculta la configuración del temporizador. ¡Controla tu tiempo!</string>
+    <string name="side_menu">Menú lateral</string>
+    <string name="side_menu_desc">Finalmente, tienes más funciones en el menú lateral. Como guardar todo, eliminar, etc.</string>
+    <string name="app_description">De un DM vago \npara DMs vagos</string>
+</resources>

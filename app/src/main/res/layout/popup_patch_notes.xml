@@ -1,0 +1,58 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/popup_background_light_mode"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="false">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Título del Popup -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patchNotesTitle"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp"
+            app:drawableEndCompat="@drawable/ic_rol_initiative_icon"
+            app:drawableLeftCompat="@drawable/ic_rol_initiative_icon"
+            app:drawableRightCompat="@drawable/ic_rol_initiative_icon"
+            app:drawableStartCompat="@drawable/ic_rol_initiative_icon"
+            android:drawablePadding="16dp"/>
+
+    <TextView
+        android:id="@+id/patchDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/patchNotes"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/patchGreetings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/patchDescription"
+            android:text="@string/patchGreetings"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"/>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,457 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/popup_background_light_mode">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <!-- Título del Popup -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/infoTitle"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/onHold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:text="@string/onHoldDescription"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textStyle="italic"/>
+
+    <!-- LinearLayout Vertical para los pares de TextViews -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_below="@id/onHold"
+        android:layout_marginTop="16dp">
+
+            <!-- ADD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:id="@+id/addButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- SORT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/sortButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sort"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:id="@+id/sortButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sortDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- RESTART -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/restartButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/restart"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:id="@+id/restartButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/restartDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- START -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/startButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:id="@+id/startButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/startDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- NEXT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/nextButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:id="@+id/nextButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nextDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+
+
+            <!-- DELETE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/deleteButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete_character"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:id="@+id/deleteButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deleteDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- + / -  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/incrementButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/increment_button_description"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:id="@+id/slashButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/slash_description"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:id="@+id/plusMinusButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/increaseReduceDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- KILL/REVIVE  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/killButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/killRevive"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:id="@+id/reviveButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/killDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- CLEAR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/clearButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_gray_background"
+                    android:src="@drawable/ic_button_clear_list"
+                    android:padding="8dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/clearDescription"
+                    />
+
+                <TextView
+                    android:id="@+id/clearButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clearDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- ADD ALL TO FOLDER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/addAllButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_gray_background"
+                    android:src="@drawable/ic_diskette"
+                    android:padding="8dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/addAllDescription"
+                    />
+
+                <TextView
+                    android:id="@+id/addAllButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addAllDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- FOLDER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/folderButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_gray_background"
+                    android:src="@drawable/ic_folder"
+                    android:padding="8dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/folderDescription"
+                    />
+
+                <TextView
+                    android:id="@+id/folderButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/folderDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- NOTES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/notesButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_gray_background"
+                    android:src="@drawable/ic_button_note"
+                    android:padding="8dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/notes_button_info"
+                    />
+
+                <TextView
+                    android:id="@+id/notesButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notesDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- DICE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/diceButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_gray_background"
+                    android:src="@drawable/ic_button_dice"
+                    android:padding="8dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/dice_button_info"
+                    />
+
+                <TextView
+                    android:id="@+id/diceButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diceDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- DARK THEME -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/darkThemeButtonInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_gray_background"
+                    android:src="@drawable/ic_button_dark_mode"
+                    android:padding="8dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/dark_theme_button_info"
+                    />
+
+                <TextView
+                    android:id="@+id/darkThemeButtonDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/darkThemeDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+        <!-- LIGHT THEME -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageButton
+                android:id="@+id/lightThemeButtonInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_gray_background"
+                android:src="@drawable/ic_button_light_mode"
+                android:padding="8dp"
+                android:layout_marginStart="16dp"
+                android:contentDescription="@string/light_theme_button_info"
+                />
+
+            <TextView
+                android:id="@+id/lightThemeButtonDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lightThemeDescription"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

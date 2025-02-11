@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/buttonClear"
+            android:title="@string/clear_list"
+            android:icon="@drawable/ic_button_clear_list"/>
+
+        <item
+            android:id="@+id/buttonAddListToFolder"
+            android:title="@string/add_all_to_folder"
+            android:icon="@drawable/ic_diskette"/>
+
+        <item
+            android:id="@+id/buttonInfo"
+            android:title="@string/info"
+            android:icon="@drawable/ic_button_info"/>
+
+        <item
+            android:id="@+id/buttonTutorial"
+            android:title="@string/tutorial"
+            android:icon="@drawable/ic_tutorial"/>
+
+        <item
+            android:id="@+id/buttonToggleTheme"
+            android:title="@string/theme"
+            android:icon="@drawable/ic_button_dark_mode"/>
+
+        <item
+            android:id="@+id/buttonChangeLanguage"
+            android:title="@string/language"
+            android:icon="@drawable/ic_language"/>
+
+        <item
+            android:id="@+id/buttonPatchNotes"
+            android:title="@string/buttonPatchNote"
+            android:icon="@drawable/ic_patch_notes"/>
+
+        <item
+            android:id="@+id/buttonRateUs"
+            android:title="@string/buttonRateUs"
+            android:icon="@drawable/ic_star"/>
+
+        <item
+            android:id="@+id/buttonSuggestAnIdea"
+            android:title="@string/buttonSuggestAnIdea"
+            android:icon="@drawable/ic_idea"/>
+
+    </group>
+</menu>

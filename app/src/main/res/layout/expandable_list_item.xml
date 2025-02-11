@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="4dp">
+
+
+    <!-- LinearLayout que contiene childTitle -->
+    <LinearLayout
+        android:id="@+id/firstLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/childTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- LinearLayout que contiene los ImageView y TextView -->
+    <LinearLayout
+        android:id="@+id/secondLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstLinearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="42dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/charArmor"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginEnd="2dp"
+            android:contentDescription="@string/headerArmorClass"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_armor" />
+
+        <TextView
+            android:id="@+id/childArmor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/charLife"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginEnd="2dp"
+            android:contentDescription="@string/headerLife"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_life" />
+
+        <TextView
+            android:id="@+id/childLife"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/charInitiative"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginEnd="2dp"
+            android:contentDescription="@string/headerInit"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_swords" />
+
+        <TextView
+            android:id="@+id/childInitiative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/charEdit"
+            android:layout_width="34dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_edit"
+            android:contentDescription="@string/editCharacter"
+            android:layout_centerVertical="true"
+            android:paddingTop="4dp"/>
+
+        <!-- CheckBox -->
+        <CheckBox
+            android:id="@+id/checkBoxItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/charEdit"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

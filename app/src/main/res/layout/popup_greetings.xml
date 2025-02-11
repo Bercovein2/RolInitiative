@@ -1,0 +1,60 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/popup_background_light_mode">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Título del Popup -->
+        <TextView
+            android:id="@+id/greetingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/greetingsTitle"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp"
+            android:gravity="center"
+            app:drawableEndCompat="@drawable/ic_rol_initiative_icon"
+            app:drawableLeftCompat="@drawable/ic_rol_initiative_icon"
+            app:drawableRightCompat="@drawable/ic_rol_initiative_icon"
+            app:drawableStartCompat="@drawable/ic_rol_initiative_icon"
+            android:drawablePadding="16dp"/>
+
+        <TextView
+            android:id="@+id/greetingsDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/greetingsTitle"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="@string/greetingsFriends"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/patchGreetings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/greetingsDescription"
+            android:text="@string/appGreetings"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textStyle="bold|italic"/>
+
+    </RelativeLayout>
+</ScrollView>

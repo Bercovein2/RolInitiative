@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/colorSurface"
+    android:gravity="center">
+
+    <!-- Borde alrededor del ListView -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorOutline"
+        android:padding="8dp">
+
+        <ListView
+            android:id="@+id/soundListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="1dp"
+            android:padding="8dp"
+            android:focusable="false"
+            android:background="?attr/colorSurface"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"/>
+    </FrameLayout>
+
+    <!-- Botón de texto para añadir un nuevo sonido -->
+    <TextView
+        android:id="@+id/buttonAddNewSound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_sound"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"/>
+</LinearLayout>

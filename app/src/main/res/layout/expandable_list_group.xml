@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="8dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="4dp"
+    tools:ignore="RtlSymmetry">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical"> <!-- Alineación vertical de los elementos -->
+
+        <ImageView
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center_vertical"/> <!-- Alineación vertical del indicador -->
+
+        <TextView
+            android:id="@+id/groupTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"/> <!-- Alineación vertical del título -->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/folderEdit"
+            android:layout_width="34dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_edit"
+            android:contentDescription="@string/editCharacter"
+            android:layout_centerVertical="true"
+            android:paddingTop="4dp"/>
+
+        <!-- CheckBox centrado verticalmente entre ambos LinearLayout -->
+        <CheckBox
+            android:id="@+id/checkBoxItemGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/folderEdit"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>>
+</RelativeLayout>

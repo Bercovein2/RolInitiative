@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/option_edit"
+        android:title="@string/editCharacter">
+    </item>
+    <item
+        android:id="@+id/option_save"
+        android:title="@string/saveCharacter">
+    </item>
+    <item
+        android:id="@+id/option_kill"
+        android:title="@string/killRevive">
+    </item>
+    <item
+        android:id="@+id/option_delete"
+        android:title="@string/delete_character" />
+    <item
+        android:id="@+id/option_timer"
+        android:title="@string/timer_character" />
+</menu>

@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:id="@+id/layoutTitleAddToFolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/buttonNotesClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_button_close"
+            android:background="@null"
+            android:contentDescription="@string/close_folders"/>
+
+        <TextView
+            android:id="@+id/title_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/notes"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editTextNotes"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:autofillHints=""
+        android:gravity="top"
+        android:hint="@string/write_your_notes_here"
+        android:inputType="textMultiLine|textCapSentences"
+        android:background="@color/lightBrown"
+        android:padding="10dp"
+        android:textColorHint="@color/darkGray"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/characterCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/_0_500"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

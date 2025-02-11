@@ -1,0 +1,58 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/popup_background_light_mode">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <!-- Título del Popup -->
+    <TextView
+        android:id="@+id/mailViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mailSubject"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/mailInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mailViewTitle"
+        android:text="@string/mailDescription"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mailInfo"
+        android:text="@string/mail"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/instagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mail"
+        android:text="@string/instagram"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textStyle="italic"/>
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,323 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:id="@+id/layoutTitleAddToFolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/buttonCloseEditCharFolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_button_close"
+            android:background="@null"
+            android:contentDescription="@string/close_folders"/>
+
+        <TextView
+            android:id="@+id/popupTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/edit_character"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:layout_centerInParent="true"
+            android:paddingBottom="16dp"/>
+
+    </RelativeLayout>
+
+
+    <!-- Nombre del Personaje -->
+    <LinearLayout
+        android:id="@+id/layoutCharacterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/layoutTitleAddToFolder"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp" />
+
+        <EditText
+            android:id="@+id/editTextCharacterName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:text=""
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginEnd="16dp"
+            />
+    </LinearLayout>
+
+    <!-- Vida del Personaje -->
+    <LinearLayout
+        android:id="@+id/layoutCharacterLife"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/layoutCharacterName"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/life"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginEnd="8dp"
+            >
+
+            <Button
+                android:id="@+id/buttonEditReduceLifeFolder"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="@string/reduce_button_description"
+                android:textSize="15sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/round_button_background" />
+
+            <Button
+                android:id="@+id/buttonEditIncrementLifeFolder"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="@string/increment_button_description"
+                android:textSize="15sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/round_button_background" />
+
+            <EditText
+                android:id="@+id/editTextCharacterLife"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:inputType="number"
+                android:text=""
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Iniciativa del Personaje -->
+    <LinearLayout
+        android:id="@+id/layoutCharacterInitiative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/layoutCharacterLife"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/initiative"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp" />
+
+        <EditText
+            android:id="@+id/editTextCharacterInitiative"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:text=""
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginEnd="16dp"
+            android:inputType="number|numberSigned"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
+
+    <!-- Armor Class del Personaje -->
+    <LinearLayout
+        android:id="@+id/layoutCharacterArmorClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/layoutCharacterInitiative"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/armor_class_ac"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp" />
+
+        <EditText
+            android:id="@+id/editTextCharacterArmor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:text=""
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginEnd="16dp"
+            android:inputType="number|numberSigned"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
+
+    <!-- Armor Touch del Personaje -->
+    <LinearLayout
+        android:id="@+id/layoutCharacterArmorTouch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/layoutCharacterArmorClass"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/touch_armor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp" />
+
+        <EditText
+            android:id="@+id/editCharacterArmorTouchFolder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:text=""
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginEnd="16dp"
+            android:inputType="number|numberSigned"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
+
+    <!-- Armor Touch del Personaje -->
+    <LinearLayout
+        android:id="@+id/layoutCharacterArmorFlatFooted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/layoutCharacterArmorTouch"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flat_footed_armor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp" />
+
+        <EditText
+            android:id="@+id/editCharacterArmorFlatFootedFolder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:text=""
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginEnd="16dp"
+            android:inputType="number|numberSigned"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
+    <!-- Botones Save y Cancel -->
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/layoutCharacterArmorFlatFooted"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp">
+
+        <Button
+            android:id="@+id/buttonCancelEditCharFolder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel_buttons"
+            android:textSize="15sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="18sp"
+            android:autoSizeStepGranularity="1sp"
+            android:maxLines="1"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/buttonSaveEditCharFolder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save_buttons"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="18sp"
+            android:autoSizeStepGranularity="1sp"
+            android:maxLines="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="8dp" />
+    </LinearLayout>
+</RelativeLayout>

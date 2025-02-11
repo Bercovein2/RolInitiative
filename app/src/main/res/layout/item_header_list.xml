@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="0dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:id="@+id/headerInitiative"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_swords"
+        android:contentDescription="@string/headerInit"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="-2dp"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/headerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:text="@string/headerName"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <ImageView
+        android:id="@+id/headerArmorClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_armor"
+        android:contentDescription="@string/headerArmorClass"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="-6dp"
+        android:scaleType="centerInside"
+        android:paddingHorizontal="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <ImageView
+        android:id="@+id/headerLife"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_life"
+        android:contentDescription="@string/headerLife"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="0dp"
+        android:layout_marginEnd="4dp"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>

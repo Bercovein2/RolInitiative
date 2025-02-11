@@ -1,0 +1,238 @@
+<resources>
+    <string name="action_settings">Impostazioni</string>
+
+    <!-- HEADERS -->
+    <string name="headerName">Nome</string>
+    <string name="headerArmorClass">Armatura</string>
+    <string name="headerLife">Vita</string>
+    <string name="headerInit">Iniz.</string>
+    <string name="headerKill">Uccidi</string>
+
+    <!-- BUTTONS -->
+    <string name="next">Avanti</string>
+    <string name="start">Inizia</string>
+    <string name="clear">Pulire</string>
+    <string name="clean">Pulire</string>
+    <string name="restart">Riavviare</string>
+    <string name="sort">Ordina</string>
+    <string name="add">Aggiungi</string>
+    <string name="addToFight">Vai al combattimento!</string>
+
+    <!-- INPUTS -->
+    <string name="enterGameName">Inserisci il nome del gioco</string>
+    <string name="enterName">*Inserisci il nome</string>
+    <string name="enterLife">Vita</string>
+    <string name="enterArmorClass">Armatura</string>
+    <string name="enterInit">*Iniziativa</string>
+
+    <string name="gameName">Gioco:</string>
+
+    <!-- THEME MODE -->
+    <string name="toggle_theme">Cambia tema</string>
+
+    <!-- DELETE -->
+    <string name="delete_character">Elimina</string>
+
+    <string name="timer_character">Timer</string>
+
+    <!-- KILL -->
+    <string name="kill_character">Uccidi</string>
+
+    <!-- POP UP INFO -->
+    <string name="show_popup_info">Mostra Popup Info</string>
+    <string name="close_popup">Chiudi</string>
+
+    <!-- POP UP Notes -->
+    <string name="show_popup_notes">Mostra Popup Note</string>
+
+    <!-- Timer -->
+    <string name="show_timer">Mostra Timer</string>
+
+    <!-- POP UP Folder Trash -->
+    <string name="close_folders">Chiudi popup</string>
+    <string name="add_folders">Aggiungi cartella popup</string>
+
+    <!-- Timer buttons -->
+    <string name="playOrPause">Play o Pausa</string>
+    <string name="stop">Stop</string>
+
+    <string name="play">Play</string>
+    <string name="pause">Pausa</string>
+
+    <string name="sound">Suono</string>
+
+    <!-- Folder Notes -->
+    <string name="show_folders">Mostra Cartelle</string>
+
+    <!-- CLEAR LIST -->
+
+    <!-- add_all_to_folder -->
+    <string name="add_all_to_folder">Salva tutto</string>
+
+    <!--Sounds to timer -->
+    <string name="add_sounds_to_timers">Aggiungi suoni al timer</string>
+
+    <!-- ROLL DICE -->
+    <string name="roll_dice">Lancia</string>
+
+    <!-- INFO STRINGS -->
+    <string name="infoTitle">Info</string>
+    <string name="addDescription">Aggiungi giocatore/npc alla lista con nome, iniziativa e vita (opzionale)</string>
+    <string name="sortDescription">Riordina la lista in base all\'iniziativa in ordine decrescente</string>
+    <string name="clearDescription">Svuota completamente la lista</string>
+    <string name="addAllDescription">Aggiungi il combattimento attuale a una cartella</string>
+    <string name="folderDescription">Organizza i tuoi personaggi in cartelle</string>
+    <string name="startDescription">Inizia i turni evidenziando in verde il giocatore/npc che deve agire</string>
+    <string name="nextDescription">Passa il turno al giocatore successivo, se ancora in vita</string>
+    <string name="deleteDescription">Elimina un giocatore/npc dalla lista</string>
+    <string name="onHoldDescription">Puoi tenere premuto sul nome del personaggio per vedere più opzioni\n
+        Inoltre, puoi tenere premuto su altre colonne per modificarle.
+    </string>
+    <string name="increaseReduceDescription">Aumenta o diminuisci la vita con un massimo di 4 cifre</string>
+    <string name="killDescription">Uccidi/rivivi un giocatore/npc. Se morto, non avrà più turni finché non viene eliminato o rianimato</string>
+    <string name="restartDescription">Riavvia il round di turni e morti</string>
+    <string name="notesDescription">Consente di salvare note sulla partita</string>
+    <string name="diceDescription">Permette di lanciare dadi virtuali</string>
+    <string name="darkThemeDescription">Passa alla modalità scura</string>
+    <string name="lightThemeDescription">Passa alla modalità chiara</string>
+
+    <!-- USE YOUR OWN SET -->
+    <string name="useYourOwnDices">Non barare, \n usa il tuo set</string>
+    <string name="write_your_notes_here">Scrivi le tue note qui…</string>
+    <string name="notes">Note</string>
+
+    <!-- Content description info popup-->
+    <string name="round">"Voltare: "</string>
+
+    <string name="killRevive">Uccidi/Rivivi</string>
+    <string name="editCharacter">Modifica</string>
+    <string name="saveCharacter">Salva nella cartella</string>
+    <string name="navigation_drawer_open">Apri</string>
+    <string name="navigation_drawer_close">Chiudi</string>
+    <string name="theme">Tema</string>
+    <string name="language">Lingua</string>
+    <string name="info">Info</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="menu_title">Menu</string>
+
+    <string name="buttonPatchNote">Note sulla patch</string>
+    <string name="patchNotesTitle">Novità?</string>
+
+    <string name="patchGreetings">Grazie per aver usato l\'app!</string>
+
+    <string name="greetingsTitle">Questo non sarebbe stato possibile senza i miei amici…</string>
+    <string name="appGreetings">Grazie a tutti per il supporto!</string>
+
+    <string name="save_buttons">Salva</string>
+    <string name="cancel_buttons">Annulla</string>
+    <string name="close_buttons">Chiudi</string>
+
+    <string name="life_of">Vita di:</string>
+    <string name="armor_of">Armatura di:</string>
+    <string name="initiative_of">Iniziativa di:</string>
+
+    <string name="buttonRateUs">Valutaci!</string>
+    <string name="buttonSuggestAnIdea">Suggerisci!</string>
+
+    <string name="mailSubject">Ho un suggerimento!</string>
+    <string name="mailDescription">Se hai qualcosa da condividere o nuove idee, inviacele!</string>
+    <string name="myFolders">Le mie Cartelle</string>
+    <string name="folderSelector">Cartella: </string>
+    <string name="enterFolderName">Inserisci il nome della cartella…</string>
+    <string name="create_button">Crea</string>
+    <string name="select_folder">Seleziona Cartella</string>
+    <string name="also_delete_selected_folders">Elimina anche le cartelle selezionate</string>
+    <string name="are_you_sure_you_want_to_delete">Sei sicuro di voler eliminare?</string>
+    <string name="dices">Lancia un dado</string>
+    <string name="flat_footed_armor">Armatura sconsigliata:</string>
+    <string name="touch_armor">Armatura del tocco:</string>
+    <string name="armor_class_ac">Classe di armatura (AC):</string>
+    <string name="initiative">Iniziativa:</string>
+    <string name="life">Vita:</string>
+    <string name="name">Nome:</string>
+    <string name="edit_character">Modifica personaggio</string>
+    <string name="clear_timer">Cancella timer</string>
+    <string name="hide_timer_to_all">Nascondi tutti i timer</string>
+    <string name="cancel">Cancellare</string>
+    <string name="are_you_sure">Sei sicuro di nascondere tutti i timer?</string>
+    <string name="set_timer">Imposta il timer della sessione</string>
+    <string name="set_character_timer">Imposta il timer del personaggio</string>
+    <string name="add_new_sound">Aggiungi audio mp3…</string>
+    <string name="sound_name">Nome sonoro</string>
+    <string name="select_language">Seleziona la lingua</string>
+    <string name="editFolderName">Modifica nome cartella</string>
+    <string name="note_saved">Nota salvata</string>
+    <string name="create_new_folder">Crea nuova cartella</string>
+    <string name="confirm_action">Conferma l\'azione</string>
+    <string name="send_to_fight_message">Vuoi aggiungere %d personaggi al combattimento attuale?</string>
+    <string name="accept_buttons">Accettare</string>
+    <string name="text_coppied_to_clipboard">Testo copiato negli appunti</string>
+    <string name="no_character_selected">Nessun personaggio selezionato</string>
+    <string name="timer_finished">Cronometro finito!</string>
+    <string name="number_deleted_items">%d elementi rimossi</string>
+    <string name="enter_name_and_initiative">Inserisci nome e iniziativa (armatura e vita sono opzionali)</string>
+    <string name="set_valid_timer_first">Imposta prima un timer valido!</string>
+    <string name="current_fight_cleaned">Il combattimento in corso è stato risolto.</string>
+    <string name="session_timer_started">Il timer della sessione è iniziato!</string>
+    <string name="session_timer_paused">Il timer della sessione è in pausa!</string>
+    <string name="session_timer_stoped">Il timer della sessione si è fermato!</string>
+    <string name="spanish">Spagnolo</string>
+    <string name="english">Inglese</string>
+    <string name="italian">Italiano</string>
+    <string name="all_character_timer_stopped">Tutti i timer dei personaggi si sono fermati!</string>
+    <string name="new_folder_created">Nuova cartella creata</string>
+    <string name="folder_name_in_use">Nome già utilizzato, utilizzane un altro</string>
+    <string name="new_sound_added">Nuovo suono aggiunto!</string>
+    <string name="invalid_time">Orario non valido</string>
+    <string name="manage_sound_for_all_characters">Gestisci il timer del suono per TUTTI i personaggi.</string>
+    <string name="selected_no_sound">Selezionato: nessun suono</string>
+    <string name="name_cannot_be_empty">Il nome non può essere vuoto</string>
+    <string name="all_character_timer_paused">Tutti i timer dei personaggi sono stati messi in pausa!</string>
+    <string name="all_character_timer_started">Tutti i timer dei personaggi sono iniziati!</string>
+    <string name="no_character_timer">Nessun personaggio con un timer.</string>
+    <string name="folder_not_found">Cartella non trovata</string>
+    <string name="folder_position_not_found">Posizione della cartella non trovata</string>
+    <string name="character_not_found_in_folder">Carattere non trovato nella cartella.</string>
+    <string name="enter_name_armor_and_life_optional">Inserisci il nome (armatura e vita sono facoltativi)</string>
+    <string name="character_saved_in_folder">Carattere salvato nella cartella.</string>
+    <string name="character_cant_save_in_folder">Impossibile salvare nella cartella</string>
+    <string name="create_folder_first">Crea prima una cartella</string>
+    <string name="no_character_to_add">Non ci sono caratteri da aggiungere</string>
+    <string name="manage_session_sound_timer">Gestisci il timer del suono della sessione</string>
+    <string name="sound_deleted">Suono rimosso</string>
+    <string name="all_character_saved_in_folder">Tutti i personaggi salvati nella cartella.</string>
+    <string name="folder_doesnt_exist">La cartella non esiste</string>
+    <string name="would_you_like_to_add_characters">Vuoi aggiungere %d personaggi al combattimento attuale?</string>
+    <string name="characters_added_to_actual_fight">%d personaggi aggiunti al combattimento vero e proprio</string>
+    <string name="character_edited">Carattere %d modificato</string>
+    <string name="folder_updated">Cartella aggiornata</string>
+    <string name="selected">"Selezionato: "</string>
+    <string name="armor_edited">%d armatura modificata</string>
+    <string name="initiative_edited">%d iniziativa modificata</string>
+    <string name="timer_set_to">Temporizzatore impostato su %d</string>
+    <string name="life_edited">Modificato %d vita</string>
+    <string name="manage_sound_timer_for">Gestisci il timer del suono per %d</string>
+    <string name="are_you_sure_to_clear_character_list">Sei sicuro di voler eliminare l\'elenco dei personaggi? \nRicorda: cancellerà solo il combattimento vero e proprio, non i personaggi nelle cartelle.</string>
+    <string name="add_button">Pulsante Aggiungi</string>
+    <string name="add_button_desc">Scrivi e aggiungi le statistiche del tuo personaggio alla battaglia attuale.</string>
+    <string name="hold_tap">Tieni premuto…</string>
+    <string name="hold_tap_desc">…su ogni statistica da modificare o sul nome del personaggio per vedere più opzioni come uccidere, eliminare, modificare, salvare, ecc.</string>
+    <string name="sort_button">Pulsante Ordina</string>
+    <string name="sort_button_desc">Ordina a due o più personaggi di combattere in base alla loro iniziativa</string>
+    <string name="start_next_button">Pulsante Inizia/Avanti</string>
+    <string name="start_next_button_desc">Inizia a contare i turni. Una volta avviato, avanzare il cursore premendo Avanti</string>
+    <string name="restart_button">Pulsante Riavviare</string>
+    <string name="restart_button_desc">Se hai già iniziato una battaglia, puoi riavviarla ogni volta che ne hai bisogno</string>
+    <string name="folder_button">Pulsante Cartella</string>
+    <string name="folder_button_desc">Crea e prepara i tuoi personaggi in cartelle prima della tua prossima sessione.</string>
+    <string name="note_button">Pulsante Nota</string>
+    <string name="note_button_desc">Scrivi un riassunto del combattimento, un\'introduzione o eventuali dettagli che ti aiuteranno per la sessione successiva.</string>
+    <string name="dice_button">Pulsante dei Dadi</string>
+    <string name="dice_button_desc">Non hai dadi fisici? Non preoccuparti, puoi usare i dadi virtuali</string>
+    <string name="timer_button">Pulsante Timer</string>
+    <string name="timer_button_desc">Mostra o nascondi le impostazioni del timer. Controlla il tuo tempo!</string>
+    <string name="side_menu">Menù laterale</string>
+    <string name="side_menu_desc">Infine, hai più funzioni nel menu laterale. Come salvare tutto, eliminare, ecc.</string>
+    <string name="app_description">Da un DM pigro \nper DMs pigri</string>
+
+</resources>

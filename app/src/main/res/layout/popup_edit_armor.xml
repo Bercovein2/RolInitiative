@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:id="@+id/layoutTitleAddToFolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/buttonDiceClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_button_close"
+            android:background="@null"
+            android:contentDescription="@string/close_folders"/>
+
+        <TextView
+            android:id="@+id/character_name_armor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Character Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:layout_centerInParent="true"
+            android:paddingBottom="16dp"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/button_decrease_armor"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/reduce_button_description"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edit_armor"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Armor"
+            android:inputType="number|numberSigned"  />
+
+        <Button
+            android:id="@+id/button_increase_armor"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/increment_button_description"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:layout_marginEnd="8dp">
+
+        <Button
+            android:id="@+id/button_cancel_armor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_buttons"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/button_save_armor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_buttons"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

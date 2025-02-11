@@ -1,0 +1,303 @@
+<resources>
+    <string name="app_name" translatable="false">Rol Initiative</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+   <string name="second_fragment_label" translatable="false">Second Fragment</string>
+
+   <!-- HEADERS -->
+    <string name="headerName">Name</string>
+    <string name="headerArmorClass">Armor</string>
+    <string name="headerLife">Life</string>
+    <string name="headerInit">Init.</string>
+    <string name="headerKill">Kill</string>
+
+    <!-- BUTTONS -->
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+    <string name="clear">Clear</string>
+    <string name="clean">Clean</string>
+    <string name="restart">Restart</string>
+    <string name="sort">Sort</string>
+    <string name="add">Add</string>
+    <string name="addToFight">Go to Fight!</string>
+
+    <!-- INPUTS -->
+    <string name="enterGameName">Enter game name</string>
+    <string name="enterName">*Enter name</string>
+    <string name="enterLife">Life</string>
+    <string name="enterArmorClass">Armor</string>
+    <string name="enterInit">*Initiative</string>
+
+    <string name="gameName">Game:</string>
+
+    <!-- THEME MODE -->
+    <string name="toggle_theme">Toggle Theme</string>
+
+    <!-- DELETE -->
+    <string name="delete_character">Delete</string>
+
+    <string name="timer_character">Timer</string>
+
+    <!-- KILL -->
+    <string name="kill_character">Kill</string>
+
+    <!-- PLUS MINUS BUTTONS -->
+    <string name="increment_button_description" translatable="false">+</string>
+    <string name="reduce_button_description" translatable="false">-</string>
+    <string name="slash_description" translatable="false">-</string>
+
+    <!-- POP UP INFO -->
+    <string name="show_popup_info">Show Popup Info</string>
+    <string name="close_popup">Close</string>
+
+    <!-- POP UP Notes -->
+    <string name="show_popup_notes">Show Popup Notes</string>
+
+    <!-- Timer -->
+    <string name="show_timer">Show Timer</string>
+
+    <!-- POP UP Folder Trash -->
+    <string name="delete_characters_from_database" translatable="false">Delete selected characters/folders</string>
+
+    <!-- POP UP Folder Trash -->
+    <string name="close_folders">Close popup</string>
+    <string name="add_folders">Add folder popup</string>
+
+
+    <!-- Timer buttons -->
+    <string name="playOrPause">Play or Pause</string>
+    <string name="stop">Stop</string>
+
+
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+
+    <string name="sound">Sound</string>
+
+    <!-- Folder Notes -->
+    <string name="show_folders">Show Folders</string>
+
+    <!-- POP UP Dice -->
+    <string name="show_popup_dice" translatable="false">Show Popup Dice</string>
+
+
+    <!-- CLEAR LIST -->
+    <string name="clear_list" translatable="false">Clear list</string>
+    <!-- add_all_to_folder -->
+    <string name="add_all_to_folder">Add all to folder</string>
+    <!--Sounds to timer -->
+    <string name="add_sounds_to_timers">Add timer sounds</string>
+
+    <!-- ROLL DICE -->
+    <string name="roll_dice">Roll</string>
+
+    <!-- INFO STRINGS -->
+    <string name="infoTitle">Info</string>
+    <string name="addDescription">Add player/npc to list with name, initiative and life (optional)</string>
+    <string name="sortDescription">Reorder list based on initiative in descending order</string>
+    <string name="clearDescription">Empty the list completely</string>
+    <string name="addAllDescription">Add actual fight to a folder</string>
+    <string name="folderDescription">Organize your characters in folders</string>
+    <string name="startDescription">Start turns by indicating in green player/npc who must play</string>
+    <string name="nextDescription">Advances turn to the next player as long as they are still alive</string>
+    <string name="deleteDescription">Delete a player/npc from list</string>
+    <string name="onHoldDescription">You can hold tap on character name to see more options\n
+        Also can hold tap on other columns to edit each one.
+    </string>
+    <string name="increaseReduceDescription">Increase or decrease life with a maximum of 4 digits</string>
+    <string name="killDescription">Kill/revive player/npc. If is dead will no longer have turns in the round until eliminated or revived</string>
+    <string name="restartDescription">Restart round of turns and deaths</string>
+    <string name="notesDescription">Allows you to save notes about the game</string>
+    <string name="diceDescription">Allows to roll virtual dices</string>
+    <string name="darkThemeDescription">Switch to dark mode</string>
+    <string name="lightThemeDescription">Switch to light mode</string>
+
+    <!-- USE YOUR OWN SET -->
+    <string name="useYourOwnDices">Don\'t be a cheater, \n use your own set</string>
+    <string name="write_your_notes_here">Write your notes here…</string>
+    <string name="notes">Notes</string>
+
+    <!-- Content description info popup-->
+    <string name="kill_button_info" translatable="false">Kill button info</string>
+    <string name="revive_button_info" translatable="false">Kill/Revive</string>
+    <string name="restart_button_info" translatable="false">Restart button info</string>
+    <string name="notes_button_info" translatable="false">Notes button info</string>
+    <string name="dice_button_info" translatable="false">Dice button info</string>
+    <string name="dark_theme_button_info" translatable="false">Dark Theme button info</string>
+    <string name="light_theme_button_info" translatable="false">Light Theme button info</string>
+    <string name="round">"Round: "</string>
+
+    <string name="killRevive">Kill/Revive</string>
+    <string name="editCharacter">Edit</string>
+    <string name="saveCharacter">Save in folder</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    <string name="info">Info</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="menu_title">Menu</string>
+
+    <string name="buttonPatchNote">Patch notes</string>
+    <string name="patchNotesTitle">What\'s new?</string>
+
+    <string name="patchGreetings">Thanks for using the app!</string>
+
+    <string name="greetingsTitle">This would not have been possible without my friends…</string>
+    <string name="greetingsFriends" translatable="false">
+            Ami,
+            Ari,
+            Bruno,
+            Caro,
+            Casca,
+            Coti,
+            Diego,
+            Elias,
+            Flor,
+            Fran,
+            Ger,
+            Lucas,
+            Ludmi,
+            Marcos,
+            Marian,
+            Marote,
+            Mica,
+            Nacho,
+            Nico,
+            Olki,
+            Pinky,
+            Rama,
+            Santi y
+            Seba
+    </string>
+
+    <string name="appGreetings">Thank you all for the support!</string>
+
+    <string name="instagramURL" translatable="false">https://www.instagram.com/rol_initiative</string>
+    <string name="googlePlayStoreURL" translatable="false">https://play.google.com/store/apps/details?id=com.ocreboy.rolinitiative</string>
+
+
+
+    <string name="logoContentDescription" translatable="false">Logo to instagram footer</string>
+
+    <string name="save_buttons">Save</string>
+    <string name="cancel_buttons">Cancel</string>
+    <string name="close_buttons">Close</string>
+
+    <string name="life_of">Life of:</string>
+    <string name="armor_of">Armor of:</string>
+    <string name="initiative_of">Initiative of:</string>
+
+    <string name="buttonRateUs">Rate us!</string>
+    <string name="buttonSuggestAnIdea">Suggest!</string>
+
+
+    <!-- INFO STRINGS -->
+    <string name="mailSubject">I have a suggestion!</string>
+    <string name="mailDescription">If you have something to share or some new ideas, send it to us!</string>
+    <string name="mail" translatable="false">rol.initiative.app@gmail.com</string>
+    <string name="instagram" translatable="false"><a href="@string/instagramURL">Instagram</a></string>
+    <string name="myFolders">My Folders</string>
+    <string name="folderSelector">Folder: </string>
+    <string name="enterFolderName">Enter folder name…</string>
+    <string name="create_button">Create</string>
+    <string name="select_folder">Select Folder</string>
+    <string name="also_delete_selected_folders">Also delete selected folders</string>
+    <string name="are_you_sure_you_want_to_delete">Are you sure you want to delete ?</string>
+    <string name="dices">Roll a dice</string>
+    <string name="flat_footed_armor">Flat-Footed Armor:</string>
+    <string name="touch_armor">Touch Armor:</string>
+    <string name="armor_class_ac">Armor Class (AC):</string>
+    <string name="initiative">Initiative:</string>
+    <string name="life">Life:</string>
+    <string name="name">Name:</string>
+    <string name="edit_character">Edit Character</string>
+    <string name="clear_timer">Clear timer</string>
+    <string name="_00_00_00" translatable="false">00:00:00</string>
+    <string name="hide_timer_to_all">Hide timer to all</string>
+    <string name="ok" translatable="false">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="are_you_sure">Are you sure to hide all timers?</string>
+    <string name="set_timer">Set session timer</string>
+    <string name="set_character_timer">Set character timer</string>
+    <string name="add_new_sound">Add mp3 sound…</string>
+    <string name="sound_name">Sound Name</string>
+    <string name="select_language">Select language</string>
+ <string name="editFolderName">Edit Folder Name</string>
+ <string name="note_saved">Note saved</string>
+ <string name="_0_500" translatable="false">0/500</string>
+ <string name="create_new_folder">Create new folder</string>
+ <string name="confirm_action">Confirm Action</string>
+ <string name="send_to_fight_message">Do you want to add %d characters to the current fight?"</string>
+ <string name="accept_buttons">Accept</string>
+ <string name="text_coppied_to_clipboard">Text copied to clipboard</string>
+ <string name="no_character_selected">No characters selected</string>
+ <string name="timer_finished">Timer finished!</string>
+ <string name="number_deleted_items">%d items deleted</string>
+ <string name="enter_name_and_initiative">Please enter name and initiative (armor and life are optional)</string>
+ <string name="set_valid_timer_first">Set a valid timer first!</string>
+ <string name="current_fight_cleaned">Current fight was cleaned</string>
+ <string name="session_timer_started">Session timer started!</string>
+ <string name="session_timer_paused">Session timer paused!</string>
+ <string name="session_timer_stoped">Session timer stoped!</string>
+ <string name="spanish">Spanish</string>
+ <string name="english">English</string>
+ <string name="italian">Italian</string>
+ <string name="all_character_timer_stopped">All character timers stopped!</string>
+ <string name="new_folder_created">New folder created</string>
+ <string name="folder_name_in_use">Name already taken, please use another one</string>
+ <string name="new_sound_added">New sound added!</string>
+ <string name="invalid_time">Invalid time</string>
+ <string name="manage_sound_for_all_characters">Manage sound timer for ALL characters</string>
+ <string name="selected_no_sound">Selected: No sound</string>
+ <string name="name_cannot_be_empty">Name cannot be empty</string>
+ <string name="all_character_timer_paused">All character timers paused!</string>
+ <string name="all_character_timer_started">All character timers started!</string>
+ <string name="no_character_timer">No character with timer</string>
+ <string name="folder_not_found">Folder not found</string>
+ <string name="folder_position_not_found">Folder position not found</string>
+ <string name="character_not_found_in_folder">Character not found in folder</string>
+ <string name="enter_name_armor_and_life_optional">Please enter name (armor and life are optional)</string>
+ <string name="character_saved_in_folder">Character saved in folder</string>
+ <string name="character_cant_save_in_folder">Can\'t save in folder</string>
+ <string name="create_folder_first">Create a folder first</string>
+ <string name="no_character_to_add">No characters to add</string>
+ <string name="manage_session_sound_timer">Manage session sound timer</string>
+ <string name="sound_deleted">Sound deleted</string>
+ <string name="all_character_saved_in_folder">All characters saved in folder</string>
+ <string name="folder_doesnt_exist">Folder doesn\'t exist</string>
+ <string name="would_you_like_to_add_characters">Do you want to add %d characters to the current fight?</string>
+ <string name="characters_added_to_actual_fight">%d characters added to actual fight</string>
+ <string name="character_edited">Character %d edited</string>
+ <string name="folder_updated">Folder updated</string>
+ <string name="selected">"Selected: "</string>
+ <string name="armor_edited">Armor of %d edited</string>
+ <string name="initiative_edited">Initiative of %d edited</string>
+ <string name="timer_set_to">Timer set to %d</string>
+ <string name="life_edited">Life of %d edited</string>
+ <string name="manage_sound_timer_for">Manage sound timer for %d</string>
+ <string name="are_you_sure_to_clear_character_list">Are you sure you want to clear the character list? \\nRemember: it will erase only actual fight, not characters in folders</string>
+ <string name="add_button">Add button</string>
+ <string name="add_button_desc">Writes and add your character stats to current battle</string>
+ <string name="hold_tap">Hold tap...</string>
+ <string name="hold_tap_desc">...on each stat to edit or on character name to see more options like kill, delete, edit, save, etc</string>
+ <string name="sort_button">Sort Button</string>
+ <string name="sort_button_desc">Order two or more characters in battle according to their initiative</string>
+ <string name="start_next_button">Start/Next button</string>
+ <string name="start_next_button_desc">Starts the counting of turns. Once started, advance the cursor by pressing Next</string>
+ <string name="restart_button">Restart button</string>
+ <string name="restart_button_desc">If you already started a battle, you can restart it when you need it</string>
+ <string name="folder_button">Folder button</string>
+ <string name="folder_button_desc">Create and prepare your characters in folders before your next session</string>
+ <string name="note_button">Note button</string>
+ <string name="note_button_desc">Write a summary of the fight, an introduction or any detail that will help you for the next session</string>
+ <string name="dice_button">Dice button</string>
+ <string name="dice_button_desc">Don\'t you have physical dice? Don\'t worry, you can use virtual dices</string>
+ <string name="timer_button">Timer button</string>
+ <string name="timer_button_desc">Show or hide timer settings. Control your time!</string>
+ <string name="side_menu">Side menu</string>
+ <string name="side_menu_desc">Finally, you have more features in the side menu. Such as save all, delete, etc</string>
+ <string name="rol_initiative" translatable="false">Rol Initiative</string>
+ <string name="app_description">From a lazy DM \nfor lazy DMs</string>
+</resources>

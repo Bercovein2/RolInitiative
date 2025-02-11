@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:background="?attr/colorPrimary"
+    android:layout_marginTop="8dp"
+    android:gravity="center_vertical">
+
+    <!-- EditText para ingresar el nombre del juego -->
+    <EditText
+        android:id="@+id/editGameName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:maxLength="25"
+        android:hint="@string/enterGameName"
+        android:background="@android:color/transparent"
+        android:inputType="textCapWords"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/lightGray"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:padding="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- TextView para mostrar la ronda -->
+    <TextView
+        android:id="@+id/textRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/round"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <!-- TextView para mostrar el turno -->
+    <TextView
+        android:id="@+id/textTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+</LinearLayout>
