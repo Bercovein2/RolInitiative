@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="patchNotes" translatable="false">
+    <string name="patchNotes">
         <b>New Features: Language and Timers!</b>\n
         \t\t- You can now switch language from the side menu to English, Spanish or Italian.
         \t\t- <b>Set a timer</b> for your session or characters, helping you manage time more efficiently.

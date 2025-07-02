@@ -13,9 +13,9 @@ android {
     defaultConfig {
         applicationId = "com.ocreboy.rolinitiative"
         minSdk = 29
-        targetSdk = 34
-        versionCode = 55
-        versionName = "3.16.0"
+        targetSdk = 35
+        versionCode = 56
+        versionName = "3.17.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

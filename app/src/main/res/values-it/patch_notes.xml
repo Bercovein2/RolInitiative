@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="patchNotes">
+        <b>Nuove funzionalità: Lingua e Timer!</b>\n
+        \t\t- Ora puoi cambiare lingua dal menu laterale in inglese, spagnolo o italiano.
+        \t\t- <b>Imposta un timer</b> per la tua sessione o per i personaggi, aiutandoti a gestire il tempo in modo più efficiente.
+        Usalo per controllare la durata di una partita o di qualsiasi altra attività.\n\n
+
+        <b>Come usare il timer di <u>sessione</u>:</b>\n
+        \t\t\t- Tocca l\'<b>icona del timer</b> per aprire le impostazioni del timer.\n
+        \t\t\t- Tocca l\'orario per regolare il timer secondo le tue esiºgenze.\n
+        \t\t\t- Cambia il suono se vuoi oppure aggiungi il tuo!.\n
+
+        <b>Come usare il timer del <u>personaggio</u>:</b>\n
+        \t\t\t- Tieni premuto sul personaggio e premi <b>Timer</b> per attivare ogni timer\n
+        \t\t\t- Tieni premuto sul timer del personaggio e usa le funzioni del popup per gestire il tempo del personaggio o usa le impostazioni in alto a destra per gestirli TUTTI\n
+
+        L\'app ti avviserà quando il tempo sarà scaduto.\n
+        Puoi anche gestire quei timer dei personaggi con le opzioni in alto a destra\n\n
+        Prendi il controllo delle tue sessioni come mai prima d\'ora!\n
+        <b>Scoprilo ora e sfrutta al massimo il tuo tempo!</b>
+    </string>
+</resources>

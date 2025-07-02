@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="patchNotes">
+        <b>Nuevas funciones: ¡Idioma y temporizadores!</b>\n
+        \t\t- Ahora puedes cambiar el idioma desde el menú lateral a inglés, español o italiano.
+        \t\t- <b>Configura un temporizador</b> para tu sesión o personajes, ayudándote a gestionar el tiempo de manera más eficiente.
+        Úsalo para controlar la duración de una partida o cualquier actividad que prefieras.\n\n
+
+        <b>Cómo usar el temporizador de <u>sesión</u>:</b>\n
+        \t\t\t- Toca el <b>icono del temporizador</b> para abrir la configuración del temporizador.\n
+        \t\t\t- Toca la hora para ajustar el temporizador según tus necesidades.\n
+        \t\t\t- ¡Cambia el sonido si lo deseas o agrega el tuyo propio!.\n
+
+        <b>Cómo usar el temporizador de <u>personaje</u>:</b>\n
+        \t\t\t- Mantén pulsado sobre el personaje y presiona <b>Temporizador</b> para activar cada temporizador\n
+        \t\t\t- Mantén pulsado sobre el temporizador del personaje y usa las funciones del popup para gestionar el tiempo del personaje o usa las opciones en la parte superior derecha para gestionar TODOS\n
+
+        La app te notificará cuando el tiempo se acabe.\n
+        También puedes gestionar esos temporizadores de personaje con las opciones en la parte superior derecha\n\n
+        ¡Toma el control de tus sesiones como nunca antes!\n
+        <b>¡Explóralo ahora y aprovecha al máximo tu tiempo!</b>
+    </string>
+</resources>
