@@ -472,5 +472,6 @@ class FoldersCharactersAdapter(
         }
     }
 
+
 }
 

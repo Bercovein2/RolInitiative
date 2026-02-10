@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
 import android.graphics.Color
+import android.net.Uri
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
@@ -16,12 +17,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.ocreboy.rolinitiative.Character
 import com.ocreboy.rolinitiative.GlobalVariables
 import com.ocreboy.rolinitiative.MainActivity
@@ -58,7 +61,8 @@ class CharacterAdapter(
         val textViewInitiative: TextView = itemView.findViewById(R.id.characterInitiative)
         val textViewArmor: TextView = itemView.findViewById(R.id.characterArmorClass)
         val textViewLife: TextView = itemView.findViewById(R.id.characterLife)
-
+        val imageCharacterPreview: ImageView? =
+            itemView.findViewById(R.id.imageCharacterPreview)
         @RequiresApi(Build.VERSION_CODES.R)
         fun bind(character: Character) {
             textViewName.text = character.name
@@ -73,6 +77,13 @@ class CharacterAdapter(
                 timerTextView.text = TimerUtils.formatTimerFull(character.timeLeftInSeconds)
             } else {
                 timerTextView.text = TimerUtils.getZeroFormat()
+            }
+
+            if (!character.imageUri.isNullOrEmpty()) {
+                imageCharacterPreview?.visibility = View.VISIBLE
+                imageCharacterPreview?.load(Uri.parse(character.imageUri))
+            } else {
+                imageCharacterPreview?.visibility = View.GONE
             }
 
             // Configurar el menú popup para la pulsación prolongada en el TextView
