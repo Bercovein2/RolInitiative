@@ -4,12 +4,15 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.Update
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.ocreboy.rolinitiative.model.SavedCharacter
 
-@Database(entities = [SavedCharacter::class], version = 2)
+@Database(
+    entities = [SavedCharacter::class],
+    version = 3,
+    exportSchema = false
+)
 abstract class SavedCharacterDatabase : RoomDatabase() {
 
     abstract fun getDao(): SavedCharacterDao
@@ -19,19 +22,36 @@ abstract class SavedCharacterDatabase : RoomDatabase() {
         private var instance: SavedCharacterDatabase? = null
         private val LOCK = Any()
 
-        // Definir la migración de la versión 1 a la versión 2
+        /**
+         * MIGRATION 1 -> 2
+         * Se agregó el campo initiative
+         */
         val MIGRATION_1_2 = object : Migration(1, 2) {
             override fun migrate(db: SupportSQLiteDatabase) {
-                // Agregar la nueva columna 'initiative' con un valor por defecto
-                db.execSQL("ALTER TABLE characters ADD COLUMN initiative INTEGER NOT NULL DEFAULT 0")
+                db.execSQL(
+                    "ALTER TABLE characters ADD COLUMN initiative INTEGER NOT NULL DEFAULT 0"
+                )
             }
         }
 
-        operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
-            instance ?: createDatabase(context).also {
-                instance = it
+        /**
+         * MIGRATION 2 -> 3
+         * Se agrega el campo imageUri (nullable)
+         */
+        val MIGRATION_2_3 = object : Migration(2, 3) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    "ALTER TABLE characters ADD COLUMN imageUri TEXT"
+                )
             }
         }
+
+        operator fun invoke(context: Context): SavedCharacterDatabase =
+            instance ?: synchronized(LOCK) {
+                instance ?: createDatabase(context).also {
+                    instance = it
+                }
+            }
 
         private fun createDatabase(context: Context) =
             Room.databaseBuilder(
@@ -39,8 +59,10 @@ abstract class SavedCharacterDatabase : RoomDatabase() {
                 SavedCharacterDatabase::class.java,
                 "character_db"
             )
-                // Añadir la migración cuando crees la base de datos
-                .addMigrations(MIGRATION_1_2)
+                .addMigrations(
+                    MIGRATION_1_2,
+                    MIGRATION_2_3
+                )
                 .build()
     }
 }

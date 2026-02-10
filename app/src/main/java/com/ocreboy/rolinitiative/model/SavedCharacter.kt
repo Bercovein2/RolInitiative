@@ -16,6 +16,6 @@ data class SavedCharacter(
     var armorFlatFooted: String,
     var life: Int,
     val folderId: Int,
-    var initiative: Int
-
+    var initiative: Int,
+    var imageUri: String? = null
 ): Parcelable

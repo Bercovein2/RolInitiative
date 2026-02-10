@@ -18,6 +18,7 @@ import android.widget.ImageView
 import android.widget.PopupWindow
 import android.widget.TextView
 import android.widget.Toast
+import coil.load
 import com.ocreboy.rolinitiative.MainActivity
 import com.ocreboy.rolinitiative.MyApplication
 import com.ocreboy.rolinitiative.R
@@ -37,12 +38,14 @@ import kotlinx.coroutines.withContext
 class FoldersCharactersAdapter(
     private val context: MainActivity,
     private var foldersWithCharacters: Map<Folder, List<SavedCharacter>>
+
 ) : BaseExpandableListAdapter() {
     private val repository: CharacterRepository
     val selectedItems = mutableSetOf<Pair<Int, Int>>()
     val groupSelection = mutableMapOf<Int, Boolean>()
     val childSelection = mutableMapOf<Int, MutableList<Boolean>>()
     var onSelectionChangedListener: ((Boolean) -> Unit)? = null
+    var onPickImageRequested: ((ImageView, (String?) -> Unit) -> Unit)? = null
 
     init {
         val dbCharacter = SavedCharacterDatabase.invoke(context)
@@ -255,6 +258,10 @@ class FoldersCharactersAdapter(
             val buttonIncrementLife = popupView.findViewById<Button>(R.id.buttonEditIncrementLifeFolder)
             val buttonReduceLife = popupView.findViewById<Button>(R.id.buttonEditReduceLifeFolder)
 
+            val buttonCamera = popupView.findViewById<ImageButton>(R.id.buttonAddImageFolder)
+            FrameColor(context).changeVectorColorBlackWhite(buttonCamera)
+
+            val imagePreview = popupView.findViewById<ImageView>(R.id.imageCharacterFolderPreview)
             // Configure buttons to update character's life
             buttonIncrementLife.setOnClickListener {
                 var life: Int = editTextLife.text.toString().toInt()
@@ -264,7 +271,12 @@ class FoldersCharactersAdapter(
                     editTextLife.setText("${character.life}")
                 }
             }
-
+            buttonCamera.setOnClickListener {
+                onPickImageRequested?.invoke(imagePreview) { uri ->
+                    character.imageUri = uri
+                    imagePreview.visibility = View.VISIBLE
+                }
+            }
             buttonReduceLife.setOnClickListener {
                 var life: Int
                 life = if(editTextLife.text.isNotEmpty()) {
@@ -294,7 +306,10 @@ class FoldersCharactersAdapter(
             editTextLife.filters = Filters.numberBetweenZeroAndMax()
             editTextArmorTouch.filters = Filters.numberBetweenZeroAndMax()
             editTextArmorFlat.filters = Filters.numberBetweenZeroAndMax()
-
+            character.imageUri?.let {
+                imagePreview.visibility = View.VISIBLE
+                imagePreview.load(it)
+            }
             // Acciones del botón cancelar
             buttonCancel.setOnClickListener {
                 dialog.dismiss()

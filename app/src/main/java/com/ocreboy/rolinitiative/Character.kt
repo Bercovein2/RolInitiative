@@ -22,22 +22,27 @@ data class Character(
     var originalTimer: Int,
     var isTimerRunning: Boolean = false,
     var countDownTimer: CountDownTimer? = null,
-    var timerSoundName: String? = GlobalVariables.noSoundName
+    var timerSoundName: String? = GlobalVariables.noSoundName,
+    var imageUri: String? = null
 
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
-        parcel.readString() ?: "",
-        parcel.readInt(),
-        parcel.readInt(),
-        parcel.readString()?: "",
-        parcel.readString()?: "",
-        parcel.readByte() != 0.toByte(),
-        parcel.readInt(),
-        false,
-        false,
-        false,
-        0,
-        0
+        parcel.readString() ?: "",        // name
+        parcel.readInt(),                 // initiative
+        parcel.readInt(),                 // armorClass
+        parcel.readString() ?: "",        // armorTouch
+        parcel.readString() ?: "",        // armorFlatFooted
+        parcel.readByte() != 0.toByte(),  // isSelected
+        parcel.readInt(),                 // life
+        parcel.readByte() != 0.toByte(),  // isDead
+        parcel.readByte() != 0.toByte(),  // hasActiveTimer
+        parcel.readByte() != 0.toByte(),  // isPaused
+        parcel.readInt(),                 // timeLeftInSeconds
+        parcel.readInt(),                 // originalTimer
+        parcel.readByte() != 0.toByte(),  // isTimerRunning
+        null,                             // countDownTimer (NO parcelable)
+        parcel.readString(),              // timerSoundName
+        parcel.readString()               // imageUri 👈
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -48,6 +53,14 @@ data class Character(
         parcel.writeString(armorFlatFooted)
         parcel.writeByte(if (isSelected) 1 else 0)
         parcel.writeInt(life)
+        parcel.writeByte(if (isDead) 1 else 0)
+        parcel.writeByte(if (hasActiveTimer) 1 else 0)
+        parcel.writeByte(if (isPaused) 1 else 0)
+        parcel.writeInt(timeLeftInSeconds)
+        parcel.writeInt(originalTimer)
+        parcel.writeByte(if (isTimerRunning) 1 else 0)
+        parcel.writeString(timerSoundName)
+        parcel.writeString(imageUri)
     }
 
     override fun describeContents(): Int {

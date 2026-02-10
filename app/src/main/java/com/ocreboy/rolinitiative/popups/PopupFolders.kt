@@ -180,6 +180,12 @@ class PopupFolders(private val mainActivity: MainActivity) {
             expandableListView.setAdapter(adapter)
             expandableListView.setGroupIndicator(null)
 
+            adapter.onPickImageRequested =
+                { imageView, onImagePicked ->
+                    mainActivity.pickAndPreviewImage(imageView) { uri ->
+                        onImagePicked(uri)
+                    }
+                }
             // Configura el listener para cambios en la selección
             adapter.onSelectionChangedListener = { isAnySelected ->
                 enableAddButton(isAnySelected)
@@ -253,7 +259,7 @@ class PopupFolders(private val mainActivity: MainActivity) {
                             mainActivity.addCharacterToActualList(
                                 character.name, character.initiative,
                                 character.armorClass, character.armorTouch, character.armorFlatFooted,
-                                false, character.life
+                                false, character.life, character.imageUri
                             )
                         }
                         mainActivity.saveCharacterList()

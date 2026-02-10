@@ -2,6 +2,7 @@ package com.ocreboy.rolinitiative.popups
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.Gravity
@@ -21,6 +22,7 @@ import com.ocreboy.rolinitiative.MyApplication
 import com.ocreboy.rolinitiative.R
 import com.ocreboy.rolinitiative.utils.Filters
 import com.ocreboy.rolinitiative.utils.PutIntoString
+import coil.load
 
 class PopupEdit(private val context: Context) {
 
@@ -40,6 +42,8 @@ class PopupEdit(private val context: Context) {
     lateinit var armorImage: ImageView
     lateinit var initImage: ImageView
 
+    lateinit var imageCharacterPreview: ImageView
+    lateinit var buttonAddImage: ImageButton
     @SuppressLint("InflateParams")
     fun showPopupWindow(view: View, character: Character, mainActivity: MainActivity, position: Int) {
         // Inflate the popup layout
@@ -47,7 +51,6 @@ class PopupEdit(private val context: Context) {
         val popupView = inflater.inflate(R.layout.popup_edit_character, null)
 
         popupView.setBackgroundResource(mainActivity.frameColor.getFrameColor())
-
         // Create the PopupWindow
         val popupWindow = PopupWindow(popupView,
             ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -64,7 +67,10 @@ class PopupEdit(private val context: Context) {
         editTextCharacterArmorClass = popupView.findViewById(R.id.editCharacterArmorClass)
         editTextCharacterArmorTouch = popupView.findViewById(R.id.editCharacterArmorTouch)
         editTextCharacterArmorFlatFooted = popupView.findViewById(R.id.editCharacterArmorFlatFooted)
+        imageCharacterPreview = popupView.findViewById(R.id.imageCharacterPreview)
 
+        buttonAddImage = popupView.findViewById(R.id.buttonAddImage)
+        mainActivity.frameColor.changeVectorColorBlackWhite(buttonAddImage)
 
         textViewCharacterLife = popupView.findViewById(R.id.editCharacterLife)
         buttonIncrementLife = popupView.findViewById(R.id.buttonEditIncrementLife)
@@ -85,6 +91,15 @@ class PopupEdit(private val context: Context) {
         editTextCharacterArmorTouch.setText(character.armorTouch)
         editTextCharacterArmorFlatFooted.setText(character.armorFlatFooted)
         textViewCharacterLife.text = "${character.life}"
+
+        if (!character.imageUri.isNullOrEmpty()) {
+            imageCharacterPreview.visibility = View.VISIBLE
+            imageCharacterPreview.load(character.imageUri) {
+                crossfade(true)
+            }
+        } else {
+            imageCharacterPreview.visibility = View.GONE
+        }
 
         val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -149,6 +164,37 @@ class PopupEdit(private val context: Context) {
         // Cancel button to close the popup without saving
         buttonCancel.setOnClickListener {
             popupWindow.dismiss()
+        }
+
+        imageCharacterPreview.setOnClickListener {
+            mainActivity.openImagePicker { uri ->
+                if (uri != null) {
+                    character.imageUri = uri.toString()
+
+                    imageCharacterPreview.visibility = View.VISIBLE
+                    imageCharacterPreview.load(uri) {
+                        crossfade(true)
+                    }
+                }
+            }
+        }
+
+        buttonAddImage.setOnClickListener {
+            mainActivity.openImagePicker { uri ->
+                if (uri != null) {
+                    character.imageUri = uri.toString()
+
+                    imageCharacterPreview.visibility = View.VISIBLE
+                    imageCharacterPreview.load(uri) {
+                        crossfade(true)
+                    }
+
+                    mainActivity.contentResolver.takePersistableUriPermission(
+                        uri,
+                        Intent.FLAG_GRANT_READ_URI_PERMISSION
+                    )
+                }
+            }
         }
 
         // Show the popup window

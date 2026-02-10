@@ -300,4 +300,6 @@
  <string name="side_menu_desc">Finally, you have more features in the side menu. Such as save all, delete, etc</string>
  <string name="rol_initiative" translatable="false">Rol Initiative</string>
  <string name="app_description">From a lazy DM \nfor lazy DMs</string>
+ <string name="add_image">Character Image</string>
+ <string name="character_image">Character image to show</string>
 </resources>

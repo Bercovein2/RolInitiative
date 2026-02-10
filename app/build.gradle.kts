@@ -14,8 +14,8 @@ android {
         applicationId = "com.ocreboy.rolinitiative"
         minSdk = 29
         targetSdk = 35
-        versionCode = 56
-        versionName = "3.17.0"
+        versionCode = 57
+        versionName = "3.18.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -79,5 +79,5 @@ dependencies {
     implementation(libs.material.tap.target.prompt)
 
     implementation("androidx.activity:activity-ktx:1.9.0")
-
+    implementation(libs.coil)
 }

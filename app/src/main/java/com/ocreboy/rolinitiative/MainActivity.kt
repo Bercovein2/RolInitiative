@@ -30,6 +30,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.ocreboy.rolinitiative.adapter.CharacterAdapter
 import com.ocreboy.rolinitiative.animations.ButtonAnimationHelper
 import com.ocreboy.rolinitiative.language.LanguageManager
@@ -124,7 +125,9 @@ class MainActivity : AppCompatActivity()  {
     //LENGUAJE
 //    lateinit var languageManager : LanguageManager
 
-
+    //image options
+    lateinit var imagePickerLauncher: ActivityResultLauncher<Intent>
+    var imagePickerCallback: ((Uri?) -> Unit)? = null
 
     @RequiresApi(Build.VERSION_CODES.Q)
     @SuppressLint("NotifyDataSetChanged")
@@ -158,6 +161,16 @@ class MainActivity : AppCompatActivity()  {
                 filePickerCallbackUri?.invoke(null)
             }
         }
+
+        imagePickerLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+                if (result.resultCode == Activity.RESULT_OK) {
+                    val uri = result.data?.data
+                    imagePickerCallback?.invoke(uri)
+                } else {
+                    imagePickerCallback?.invoke(null)
+                }
+            }
 
         // Encuentra el layout item_timer
         itemTimer = findViewById(R.id.item_timer)
@@ -416,6 +429,13 @@ class MainActivity : AppCompatActivity()  {
                 character.timerSoundName = if (jsonObject.has("timerSoundName")) jsonObject.getString("timerSoundName")
                                             else selectedSoundResourceAllTimersFile?.nameWithoutExtension
 
+                // 🔵 NUEVO: cargar imagen si existe
+                character.imageUri =
+                    if (jsonObject.has("imageUri"))
+                        jsonObject.getString("imageUri")
+                    else
+                        null
+
                 characterList.add(character)
             }
         }
@@ -513,7 +533,7 @@ class MainActivity : AppCompatActivity()  {
                 val armorClass = if (armorClassText.isNotEmpty()) armorClassText.toInt() else 0
                 this.addCharacterToActualList(name, number,
                     armorClass, "", "",
-                    false, life)
+                    false, life, null)
                 characterAdapter.notifyDataSetChanged()
                 editTextName.text.clear()
                 editTextInitiative.text.clear()
@@ -846,6 +866,7 @@ class MainActivity : AppCompatActivity()  {
             jsonObject.put("timeLeftInSeconds", character.timeLeftInSeconds)
             jsonObject.put("originalTimer", character.originalTimer)
             jsonObject.put("timerSoundName", character.timerSoundName)
+            jsonObject.put("imageUri", character.imageUri)
 
             jsonArray.put(jsonObject)
         }
@@ -879,6 +900,7 @@ class MainActivity : AppCompatActivity()  {
                 jsonObject.put("timeLeftInSeconds", character.timeLeftInSeconds)
                 jsonObject.put("originalTimer", character.originalTimer)
                 jsonObject.put("timerSoundName", character.timerSoundName)
+                jsonObject.put("imageUri", character.imageUri)
 
                 // Guardar el JSONArray modificado de vuelta en SharedPreferences
                 GlobalVariables.sharedPreferences.edit().putString("CHARACTER_LIST", jsonArray.toString()).apply()
@@ -894,6 +916,7 @@ class MainActivity : AppCompatActivity()  {
             characterList[position-1].armorClass = character.armorClass
             characterList[position-1].armorTouch = character.armorTouch
             characterList[position-1].armorFlatFooted = character.armorFlatFooted
+            characterList[position-1].imageUri = character.imageUri
             characterAdapter.notifyItemChanged(position)
             this.saveCharacterList()
         }
@@ -1022,10 +1045,10 @@ class MainActivity : AppCompatActivity()  {
 
     fun addCharacterToActualList(name: String, number: Int, armorClass: Int,
                                  armorTouch: String, armorFlatFooted: String,
-                                 isSelected: Boolean, life: Int){
+                                 isSelected: Boolean, life: Int, imageUri: String?){
         val newCharacter = Character(name, number,
             armorClass, armorTouch, armorFlatFooted,
-            isSelected, life, false, false, false, 0, 0)
+            isSelected, life, false, false, false, 0, 0, false, null, imageUri)
 
         newCharacter.timerSoundName = selectedSoundResourceAllTimersFile?.nameWithoutExtension
 
@@ -1039,6 +1062,7 @@ class MainActivity : AppCompatActivity()  {
         frameColor.changeVectorColorDarkLightGray(lifeEditImageButton)
         frameColor.changeVectorColorDarkLightGray(armorEditImageButton)
         frameColor.changeVectorColorDarkLightGray(initiativeEditImageButton)
+        frameColor.changeVectorColorBlackWhite(lifeHeaderImageButton)
     }
 
     fun playCharacterSound(character: Character) {
@@ -1061,4 +1085,40 @@ class MainActivity : AppCompatActivity()  {
             }
         }
     }
+
+    fun openImagePicker(onImageSelected: (Uri?) -> Unit) {
+        imagePickerCallback = onImageSelected
+
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            type = "image/*"
+            addCategory(Intent.CATEGORY_OPENABLE)
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        }
+
+        imagePickerLauncher.launch(intent)
+    }
+    fun pickAndPreviewImage(
+        imageView: ImageView,
+        onImagePicked: (String) -> Unit
+    ) {
+        openImagePicker { uri ->
+            if (uri == null) return@openImagePicker
+
+            // Guardar permiso
+            contentResolver.takePersistableUriPermission(
+                uri,
+                Intent.FLAG_GRANT_READ_URI_PERMISSION
+            )
+
+            // Mostrar preview
+            imageView.visibility = View.VISIBLE
+            imageView.load(uri) {
+                crossfade(true)
+            }
+
+            // Devolver uri como String para guardar
+            onImagePicked(uri.toString())
+        }
+    }
+
 }

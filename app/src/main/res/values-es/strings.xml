@@ -107,7 +107,7 @@
     <string name="tutorial">Tutorial</string>
     <string name="menu_title">Menú</string>
 
-    <string name="buttonPatchNote">Notas de versión</string>
+    <string name="buttonPatchNote">Versión</string>
     <string name="patchNotesTitle">¿Qué hay de nuevo?</string>
 
     <string name="patchGreetings">¡Gracias por usar la aplicación!</string>
