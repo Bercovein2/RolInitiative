@@ -157,7 +157,7 @@
     <string name="note_saved">Nota guardada</string>
     <string name="create_new_folder">Crear nueva carpeta</string>
     <string name="confirm_action">Confirmar acción</string>
-    <string name="send_to_fight_message">¿Quieres agregar %d personajes a la pelea actual?</string>
+    <string name="send_to_fight_message">Se han enviado %d personaje/s a la batalla</string>
     <string name="accept_buttons">Aceptar</string>
     <string name="text_coppied_to_clipboard">Texto copiado al portapapeles</string>
     <string name="no_character_selected">No hay personajes seleccionados</string>

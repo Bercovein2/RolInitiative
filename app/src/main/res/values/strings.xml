@@ -229,7 +229,7 @@
  <string name="_0_500" translatable="false">0/500</string>
  <string name="create_new_folder">Create new folder</string>
  <string name="confirm_action">Confirm Action</string>
- <string name="send_to_fight_message">Do you want to add %d characters to the current fight?"</string>
+ <string name="send_to_fight_message">%d characters have been sent into battle"</string>
  <string name="accept_buttons">Accept</string>
  <string name="text_coppied_to_clipboard">Text copied to clipboard</string>
  <string name="no_character_selected">No characters selected</string>

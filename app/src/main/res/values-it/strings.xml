@@ -164,7 +164,7 @@
     <string name="note_saved">Nota salvata</string>
     <string name="create_new_folder">Crea nuova cartella</string>
     <string name="confirm_action">Conferma l\'azione</string>
-    <string name="send_to_fight_message">Vuoi aggiungere %d personaggi al combattimento attuale?</string>
+    <string name="send_to_fight_message">%d personaggi sono stati inviati in battaglia</string>
     <string name="accept_buttons">Accettare</string>
     <string name="text_coppied_to_clipboard">Testo copiato negli appunti</string>
     <string name="no_character_selected">Nessun personaggio selezionato</string>

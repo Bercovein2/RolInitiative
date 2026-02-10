@@ -250,7 +250,7 @@ class PopupFolders(private val mainActivity: MainActivity) {
                     builder.setTitle(R.string.confirm_action)
                     builder.setMessage(R.string.would_you_like_to_add_characters)
                     putIntoString.put(R.string.would_you_like_to_add_characters, selectedCharacters.size.toString())
-                    builder.setMessage(putIntoString.put(R.string.send_to_fight_message, selectedCharacters.size.toString()))
+                    builder.setMessage(putIntoString.put(R.string.would_you_like_to_add_characters, selectedCharacters.size.toString()))
 
                     // Botón Accept
                     builder.setPositiveButton(R.string.accept_buttons) { dialog, _ ->
