@@ -227,4 +227,5 @@
     <string name="side_menu">Menú lateral</string>
     <string name="side_menu_desc">Finalmente, tienes más funciones en el menú lateral. Como guardar todo, eliminar, etc.</string>
     <string name="app_description">De un DM vago \npara DMs vagos</string>
+    <string name="share">Share</string>
 </resources>

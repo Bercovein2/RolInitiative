@@ -1048,7 +1048,8 @@ class MainActivity : AppCompatActivity()  {
                                  isSelected: Boolean, life: Int, imageUri: String?){
         val newCharacter = Character(name, number,
             armorClass, armorTouch, armorFlatFooted,
-            isSelected, life, false, false, false, 0, 0, false, null, imageUri)
+            isSelected, life, false, false, false, 0, 0, false, null,
+            null, imageUri)
 
         newCharacter.timerSoundName = selectedSoundResourceAllTimersFile?.nameWithoutExtension
 

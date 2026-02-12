@@ -234,5 +234,6 @@
     <string name="side_menu">Menù laterale</string>
     <string name="side_menu_desc">Infine, hai più funzioni nel menu laterale. Come salvare tutto, eliminare, ecc.</string>
     <string name="app_description">Da un DM pigro \nper DMs pigri</string>
+    <string name="share">Share</string>
 
 </resources>

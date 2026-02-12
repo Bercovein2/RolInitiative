@@ -79,7 +79,7 @@ data class Character(
 
     fun convertToSavedCharacter(folderId : Int) : SavedCharacter{
         return SavedCharacter(0, this.name, this.armorClass, this.armorTouch, this.armorFlatFooted,
-            this.life, folderId, this.initiative)
+            this.life, folderId, this.initiative, this.imageUri)
     }
 
     fun startTimer(onTick: (Long) -> Unit, onFinish: () -> Unit) {

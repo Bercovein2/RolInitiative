@@ -302,4 +302,5 @@
  <string name="app_description">From a lazy DM \nfor lazy DMs</string>
  <string name="add_image">Character Image</string>
  <string name="character_image">Character image to show</string>
+    <string name="share">Share</string>
 </resources>

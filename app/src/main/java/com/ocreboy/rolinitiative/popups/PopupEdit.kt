@@ -29,6 +29,7 @@ import com.ocreboy.rolinitiative.R
 import com.ocreboy.rolinitiative.utils.Filters
 import com.ocreboy.rolinitiative.utils.PutIntoString
 import coil.load
+import com.ocreboy.rolinitiative.utils.isUriValid
 import com.ocreboy.rolinitiative.utils.showImageFullScreen
 
 class PopupEdit(private val context: Context) {
@@ -100,9 +101,15 @@ class PopupEdit(private val context: Context) {
         textViewCharacterLife.text = "${character.life}"
 
         if (!character.imageUri.isNullOrEmpty()) {
-            imageCharacterPreview.visibility = View.VISIBLE
-            imageCharacterPreview.load(character.imageUri) {
-                crossfade(true)
+            if (context.isUriValid(character.imageUri)) {
+                imageCharacterPreview.visibility = View.VISIBLE
+                imageCharacterPreview.load(character.imageUri) {
+                    crossfade(true)
+                }
+            } else {
+            // 🔹 Si la URI ya no existe, la limpiamos
+            character.imageUri = null
+                imageCharacterPreview.visibility = View.GONE
             }
         } else {
             imageCharacterPreview.visibility = View.GONE

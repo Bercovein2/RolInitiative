@@ -34,6 +34,7 @@ import com.ocreboy.rolinitiative.repository.CharacterRepository
 import com.ocreboy.rolinitiative.utils.Filters
 import com.ocreboy.rolinitiative.utils.FrameColor
 import com.ocreboy.rolinitiative.utils.PutIntoString
+import com.ocreboy.rolinitiative.utils.isUriValid
 import com.ocreboy.rolinitiative.utils.showImageFullScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -311,9 +312,19 @@ class FoldersCharactersAdapter(
             editTextLife.filters = Filters.numberBetweenZeroAndMax()
             editTextArmorTouch.filters = Filters.numberBetweenZeroAndMax()
             editTextArmorFlat.filters = Filters.numberBetweenZeroAndMax()
+
+            //cargar imagen
             character.imageUri?.let {
-                imagePreview.visibility = View.VISIBLE
-                imagePreview.load(it)
+                if (context.isUriValid(character.imageUri)) {
+                    imagePreview.visibility = View.VISIBLE
+                    imagePreview.load(it){
+                        crossfade(true)
+                    }
+                } else {
+                    // 🔹 Si la URI ya no existe, la limpiamos
+                    character.imageUri = null
+                    imagePreview.visibility = View.GONE
+                }
             }
             // Acciones del botón cancelar
             buttonCancel.setOnClickListener {
@@ -330,6 +341,7 @@ class FoldersCharactersAdapter(
                     context.showImageFullScreen(it)
                 }
             }
+
 
             // Acciones del botón guardar
             buttonSave.setOnClickListener {
