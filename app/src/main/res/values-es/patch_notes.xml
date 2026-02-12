@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="patchNotes">
-        <b>Nuevas funciones: ¡Idioma y temporizadores!</b>\n
-        \t\t- Ahora puedes cambiar el idioma desde el menú lateral a inglés, español o italiano.
-        \t\t- <b>Configura un temporizador</b> para tu sesión o personajes, ayudándote a gestionar el tiempo de manera más eficiente.
-        Úsalo para controlar la duración de una partida o cualquier actividad que prefieras.\n\n
+        <b>¡Nueva función: Imágenes de personajes!</b>\n
+        \t\t- Ahora puedes <b>añadir una imagen</b> a cada personaje.\n
+        \t\t- Comparte la imagen de tu personaje en otras apps como WhatsApp.\n\n
 
-        <b>Cómo usar el temporizador de <u>sesión</u>:</b>\n
-        \t\t\t- Toca el <b>icono del temporizador</b> para abrir la configuración del temporizador.\n
-        \t\t\t- Toca la hora para ajustar el temporizador según tus necesidades.\n
-        \t\t\t- ¡Cambia el sonido si lo deseas o agrega el tuyo propio!.\n
+        <b>Cómo añadir una imagen a un personaje:</b>\n
+        \t\t\t- Abre un personaje.\n
+        \t\t\t- Toca el <b>icono de la cámara 📷</b> para seleccionar una imagen de tu dispositivo.\n
+        \t\t\t- La imagen aparecerá en la vista previa del personaje.\n\n
 
-        <b>Cómo usar el temporizador de <u>personaje</u>:</b>\n
-        \t\t\t- Mantén pulsado sobre el personaje y presiona <b>Temporizador</b> para activar cada temporizador\n
-        \t\t\t- Mantén pulsado sobre el temporizador del personaje y usa las funciones del popup para gestionar el tiempo del personaje o usa las opciones en la parte superior derecha para gestionar TODOS\n
+        <b>Cómo ver la imagen en pantalla completa:</b>\n
+        \t\t\t- Toca la imagen del personaje.\n
+        \t\t\t- Se abrirá en pantalla completa.\n\n
 
-        La app te notificará cuando el tiempo se acabe.\n
-        También puedes gestionar esos temporizadores de personaje con las opciones en la parte superior derecha\n\n
-        ¡Toma el control de tus sesiones como nunca antes!\n
-        <b>¡Explóralo ahora y aprovecha al máximo tu tiempo!</b>
+        <b>Cómo compartir la imagen:</b>\n
+        \t\t\t- Abre la imagen en pantalla completa.\n
+        \t\t\t- Toca el <b>Ícono para compartir</b> en la esquina superior derecha.\n
+        \t\t\t- Elige la app con la que quieres compartirlo.\n\n
+
+        ¡Haz que tus personajes sean más inmersivos y personaliza tus batallas como nunca antes!\n
+        <b>¡Pruébalo ahora y dale vida a tu grupo!</b>
     </string>
 </resources>

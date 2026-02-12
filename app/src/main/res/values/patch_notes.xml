@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="patchNotes">
-        <b>New Features: Language and Timers!</b>\n
-        \t\t- You can now switch language from the side menu to English, Spanish or Italian.
-        \t\t- <b>Set a timer</b> for your session or characters, helping you manage time more efficiently.
-        Use it to control the duration of a match or any activity you prefer.\n\n
+        <b>New Feature: Character Images!</b>\n
+        \t\t- You can now <b>add an image</b> to each character.\n
+        \t\t- Share your character image in other apps like WhatsApp.\n\n
 
-        <b>How to use the <u>session</u> timer:</b>\n
-        \t\t\t- Tap the <b>timer icon</b> to open the timer settings.\n
-        \t\t\t- Tap the time to adjust the timer as per your need.\n
-        \t\t\t- Change sound if you like or add your own!.\n
+        <b>How to add an image to a character:</b>\n
+        \t\t\t- Open a character.\n
+        \t\t\t- Tap the <b>camera icon 📷</b> to select an image from your device.\n
+        \t\t\t- The image will appear in the character preview.\n\n
 
-        <b>How to use the <u>character</u> timer:</b>\n
-        \t\t\t- Hold tap on character and press <b>Timer</b> to activate each timer\n
-        \t\t\t- Hold tap on character timer and use the popup features to manage the character time or use the top-right timer settings to manage ALL\n
+        <b>How to view the image in full screen:</b>\n
+        \t\t\t- Tap the character image.\n
+        \t\t\t- It will open in full screen mode.\n\n
 
-        The app will notify you when the time is up.\n
-        Also you can manage those character timers with top right options\n\n
-        Take control of your sessions like never before!\n
-        <b>Explore it now and make the most out of your time!</b>
+        <b>How to share the image:</b>\n
+        \t\t\t- Open the image in full screen.\n
+        \t\t\t- Tap the <b>share icon</b> at the top right.\n
+        \t\t\t- Choose the app you want to share it with.\n\n
+
+        Make your characters more immersive and personalize your battles like never before!\n
+        <b>Try it now and bring your party to life!</b>
     </string>
 </resources>

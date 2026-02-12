@@ -14,8 +14,8 @@ android {
         applicationId = "com.ocreboy.rolinitiative"
         minSdk = 29
         targetSdk = 35
-        versionCode = 57
-        versionName = "3.18.0"
+        versionCode = 58
+        versionName = "3.19.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

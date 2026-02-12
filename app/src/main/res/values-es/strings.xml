@@ -205,7 +205,7 @@
     <string name="timer_set_to">Temporizador configurado en %d</string>
     <string name="life_edited">Vida de %d editado</string>
     <string name="manage_sound_timer_for">Administrar el temporizador de sonido para %d</string>
-    <string name="are_you_sure_to_clear_character_list">¿Estás seguro de que quieres borrar la lista de personajes? \\nRecuerda: solo borrará la pelea real, no los personajes en las carpetas.</string>
+    <string name="are_you_sure_to_clear_character_list">¿Estás seguro de que quieres borrar la lista de personajes? (Solo borrará la pelea actual, no los personajes en las carpetas)</string>
     <string name="add_button">Botón Agregar</string>
     <string name="add_button_desc">Escribe y agrega las estadísticas de tu personaje a la batalla actual.</string>
     <string name="hold_tap">Mantener pulsado...</string>
@@ -228,4 +228,5 @@
     <string name="side_menu_desc">Finalmente, tienes más funciones en el menú lateral. Como guardar todo, eliminar, etc.</string>
     <string name="app_description">De un DM vago \npara DMs vagos</string>
     <string name="share">Share</string>
+    <string name="clear_list">Limpiar</string>
 </resources>

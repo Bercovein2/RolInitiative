@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="patchNotes">
-        <b>Nuove funzionalità: Lingua e Timer!</b>\n
-        \t\t- Ora puoi cambiare lingua dal menu laterale in inglese, spagnolo o italiano.
-        \t\t- <b>Imposta un timer</b> per la tua sessione o per i personaggi, aiutandoti a gestire il tempo in modo più efficiente.
-        Usalo per controllare la durata di una partita o di qualsiasi altra attività.\n\n
+        <b>New Feature: Immagini dei personaggi!</b>\n
+        \t\t- Ora puoi <b>aggiungere un\'immagine</b> a ciascun personaggio.\n
+        \t\t- Condividi l\'immagine del tuo personaggio su altre app come WhatsApp.\n\n
 
-        <b>Come usare il timer di <u>sessione</u>:</b>\n
-        \t\t\t- Tocca l\'<b>icona del timer</b> per aprire le impostazioni del timer.\n
-        \t\t\t- Tocca l\'orario per regolare il timer secondo le tue esiºgenze.\n
-        \t\t\t- Cambia il suono se vuoi oppure aggiungi il tuo!.\n
+        <b>Come aggiungere un\'immagine a un personaggio:</b>\n
+        \t\t\t- Apri un personaggio.\n
+        \t\t\t- Tocca l\'<b>icona della fotocamera 📷</b> per selezionare un\'immagine dal tuo dispositivo.\n
+        \t\t\t- L\'immagine apparirà nell\'anteprima del personaggio.\n\n
 
-        <b>Come usare il timer del <u>personaggio</u>:</b>\n
-        \t\t\t- Tieni premuto sul personaggio e premi <b>Timer</b> per attivare ogni timer\n
-        \t\t\t- Tieni premuto sul timer del personaggio e usa le funzioni del popup per gestire il tempo del personaggio o usa le impostazioni in alto a destra per gestirli TUTTI\n
+        <b>Come visualizzare l\'immagine a schermo intero:</b>\n
+        \t\t\t- Tocca l\'immagine del personaggio.\n
+        \t\t\t- Si aprirà in modalità schermo intero.\n\n
 
-        L\'app ti avviserà quando il tempo sarà scaduto.\n
-        Puoi anche gestire quei timer dei personaggi con le opzioni in alto a destra\n\n
-        Prendi il controllo delle tue sessioni come mai prima d\'ora!\n
-        <b>Scoprilo ora e sfrutta al massimo il tuo tempo!</b>
+        <b>Come condividere l\'immagine:</b>\n
+        \t\t\t- Apri l\'immagine a schermo intero.\n
+        \t\t\t- Tocca l\'icona <b>condividi</b> in alto a destra.\n
+        \t\t\t- Scegli l\'app con cui vuoi condividerlo.\n\n
+
+        Rendi i tuoi personaggi più coinvolgenti e personalizza le tue battaglie come mai prima d\'ora!\n
+        <b>Provalo subito e dai vita alla tua festa!</b>
     </string>
 </resources>

@@ -9,8 +9,8 @@
     <string name="headerName">Name</string>
     <string name="headerArmorClass">Armor</string>
     <string name="headerLife">Life</string>
-    <string name="headerInit">Init.</string>
-    <string name="headerKill">Kill</string>
+    <string name="headerInit" translatable="false">Init.</string>
+    <string name="headerKill" translatable="false">Kill</string>
 
     <!-- BUTTONS -->
     <string name="next">Next</string>
@@ -40,7 +40,7 @@
     <string name="timer_character">Timer</string>
 
     <!-- KILL -->
-    <string name="kill_character">Kill</string>
+    <string name="kill_character" translatable="false">Kill</string>
 
     <!-- PLUS MINUS BUTTONS -->
     <string name="increment_button_description" translatable="false">+</string>
@@ -83,7 +83,7 @@
 
 
     <!-- CLEAR LIST -->
-    <string name="clear_list" translatable="false">Clear list</string>
+    <string name="clear_list">Clear</string>
     <!-- add_all_to_folder -->
     <string name="add_all_to_folder">Add all to folder</string>
     <!--Sounds to timer -->
@@ -277,7 +277,7 @@
  <string name="timer_set_to">Timer set to %d</string>
  <string name="life_edited">Life of %d edited</string>
  <string name="manage_sound_timer_for">Manage sound timer for %d</string>
- <string name="are_you_sure_to_clear_character_list">Are you sure you want to clear the character list? \\nRemember: it will erase only actual fight, not characters in folders</string>
+ <string name="are_you_sure_to_clear_character_list">Are you sure you want to clear the character list? (It will erase only actual fight, not characters in folders)</string>
  <string name="add_button">Add button</string>
  <string name="add_button_desc">Writes and add your character stats to current battle</string>
  <string name="hold_tap">Hold tap...</string>
@@ -300,7 +300,7 @@
  <string name="side_menu_desc">Finally, you have more features in the side menu. Such as save all, delete, etc</string>
  <string name="rol_initiative" translatable="false">Rol Initiative</string>
  <string name="app_description">From a lazy DM \nfor lazy DMs</string>
- <string name="add_image">Character Image</string>
- <string name="character_image">Character image to show</string>
+ <string name="add_image" translatable="false">Character Image</string>
+ <string name="character_image" translatable="false">Character image to show</string>
     <string name="share">Share</string>
 </resources>

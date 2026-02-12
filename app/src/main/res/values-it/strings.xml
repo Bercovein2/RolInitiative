@@ -5,8 +5,6 @@
     <string name="headerName">Nome</string>
     <string name="headerArmorClass">Armatura</string>
     <string name="headerLife">Vita</string>
-    <string name="headerInit">Iniz.</string>
-    <string name="headerKill">Uccidi</string>
 
     <!-- BUTTONS -->
     <string name="next">Avanti</string>
@@ -36,7 +34,6 @@
     <string name="timer_character">Timer</string>
 
     <!-- KILL -->
-    <string name="kill_character">Uccidi</string>
 
     <!-- POP UP INFO -->
     <string name="show_popup_info">Mostra Popup Info</string>
@@ -212,7 +209,7 @@
     <string name="timer_set_to">Temporizzatore impostato su %d</string>
     <string name="life_edited">Modificato %d vita</string>
     <string name="manage_sound_timer_for">Gestisci il timer del suono per %d</string>
-    <string name="are_you_sure_to_clear_character_list">Sei sicuro di voler eliminare l\'elenco dei personaggi? \nRicorda: cancellerà solo il combattimento vero e proprio, non i personaggi nelle cartelle.</string>
+    <string name="are_you_sure_to_clear_character_list">Sei sicuro di voler eliminare l\'elenco dei personaggi? (Cancellerà solo il combattimento vero e proprio, non i personaggi nelle cartelle)</string>
     <string name="add_button">Pulsante Aggiungi</string>
     <string name="add_button_desc">Scrivi e aggiungi le statistiche del tuo personaggio alla battaglia attuale.</string>
     <string name="hold_tap">Tieni premuto…</string>
@@ -235,5 +232,6 @@
     <string name="side_menu_desc">Infine, hai più funzioni nel menu laterale. Come salvare tutto, eliminare, ecc.</string>
     <string name="app_description">Da un DM pigro \nper DMs pigri</string>
     <string name="share">Share</string>
+    <string name="clear_list">Pulito</string>
 
 </resources>
