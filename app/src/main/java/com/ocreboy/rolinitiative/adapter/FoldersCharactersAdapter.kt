@@ -2,12 +2,16 @@ package com.ocreboy.rolinitiative.adapter
 
 import android.app.AlertDialog
 import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.BaseExpandableListAdapter
 import android.widget.Button
 import android.widget.CheckBox
@@ -30,6 +34,7 @@ import com.ocreboy.rolinitiative.repository.CharacterRepository
 import com.ocreboy.rolinitiative.utils.Filters
 import com.ocreboy.rolinitiative.utils.FrameColor
 import com.ocreboy.rolinitiative.utils.PutIntoString
+import com.ocreboy.rolinitiative.utils.showImageFullScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -319,6 +324,13 @@ class FoldersCharactersAdapter(
                 dialog.dismiss()
             }
 
+            //AGRANDA LA IMAGEN
+            imagePreview.setOnClickListener {
+                character.imageUri?.let {
+                    context.showImageFullScreen(it)
+                }
+            }
+
             // Acciones del botón guardar
             buttonSave.setOnClickListener {
                 // Actualizar el personaje con los nuevos valores
@@ -348,6 +360,8 @@ class FoldersCharactersAdapter(
 
         return view
     }
+
+
 
     fun updateCharacterInDatabase(character: SavedCharacter) {
         CoroutineScope(Dispatchers.IO).launch {

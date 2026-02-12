@@ -1,14 +1,20 @@
 package com.ocreboy.rolinitiative.popups
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -23,6 +29,7 @@ import com.ocreboy.rolinitiative.R
 import com.ocreboy.rolinitiative.utils.Filters
 import com.ocreboy.rolinitiative.utils.PutIntoString
 import coil.load
+import com.ocreboy.rolinitiative.utils.showImageFullScreen
 
 class PopupEdit(private val context: Context) {
 
@@ -166,16 +173,10 @@ class PopupEdit(private val context: Context) {
             popupWindow.dismiss()
         }
 
+        //AGRANDA LA IMAGEN
         imageCharacterPreview.setOnClickListener {
-            mainActivity.openImagePicker { uri ->
-                if (uri != null) {
-                    character.imageUri = uri.toString()
-
-                    imageCharacterPreview.visibility = View.VISIBLE
-                    imageCharacterPreview.load(uri) {
-                        crossfade(true)
-                    }
-                }
+            character.imageUri?.let {
+                context.showImageFullScreen(it)
             }
         }
 
@@ -214,4 +215,5 @@ class PopupEdit(private val context: Context) {
             true  // Indica que el evento fue consumido
         }
     }
+
 }
