@@ -1,0 +1,11 @@
+<resources>
+
+  <!-- BANNERS PUBLICIDAD -->
+  <string name="admob_banner_popupdice" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+  <string name="admob_banner_activity_main" translatable="false">ca-app-pub-3940256099942544/6300978111></string>
+
+  <!--
+  <string name="admob_banner_popupdice" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+  <string name="admob_banner_activity_main" translatable="false">ca-app-pub-3940256099942544/6300978111></string>
+  -->
+</resources>

@@ -31,7 +31,11 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.ocreboy.rolinitiative.adapter.CharacterAdapter
+import com.ocreboy.rolinitiative.ads.AdManager
 import com.ocreboy.rolinitiative.animations.ButtonAnimationHelper
 import com.ocreboy.rolinitiative.language.LanguageManager
 import com.ocreboy.rolinitiative.popups.PopupDices
@@ -135,10 +139,17 @@ class MainActivity : AppCompatActivity()  {
 
         super.onCreate(savedInstanceState)
 
+
         val languageManager = GlobalVariables.languageManager
         languageManager.loadSavedLanguage(this)
 
         setContentView(R.layout.activity_main)
+
+        //PUBLICIDAD
+        AdManager.loadBanner(
+            findViewById<AdView>(R.id.adView)
+        )
+
 
         soundManager = SoundManager(this)
 //        soundManager.copySoundsToExternalStorage()

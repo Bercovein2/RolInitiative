@@ -143,6 +143,14 @@
         </LinearLayout>
 
         <include layout="@layout/inputs_layout" />
+
+        <!-- ✅ PUBLICIDAD -->
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="@string/admob_banner_activity_main"/>
     </LinearLayout>
 
     <!-- Panel lateral -->
