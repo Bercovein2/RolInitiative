@@ -197,14 +197,4 @@
 
 
     </LinearLayout>
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adViewPopupDice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/layoutButtonsClearRandomDice"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        app:adSize="BANNER"
-        app:adUnitId="@string/admob_banner_popupdice"/>
 </RelativeLayout>

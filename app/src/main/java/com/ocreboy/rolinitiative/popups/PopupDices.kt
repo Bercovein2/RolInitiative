@@ -14,12 +14,10 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
 import android.widget.Spinner
-import com.google.android.gms.ads.AdView
 import com.ocreboy.rolinitiative.utils.FrameColor
 import com.ocreboy.rolinitiative.GlobalVariables
 import com.ocreboy.rolinitiative.R
 import com.ocreboy.rolinitiative.RollDice
-import com.ocreboy.rolinitiative.ads.AdManager
 
 class PopupDices(private val context: Context) {
 
@@ -31,10 +29,6 @@ class PopupDices(private val context: Context) {
         val frameColor = FrameColor(context)
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val popupView = inflater.inflate(R.layout.popup_dice_content, null)
-
-        AdManager.loadBanner(
-            popupView.findViewById<AdView>(R.id.adViewPopupDice)
-        )
 
         val width = LinearLayout.LayoutParams.WRAP_CONTENT
         val height = LinearLayout.LayoutParams.WRAP_CONTENT

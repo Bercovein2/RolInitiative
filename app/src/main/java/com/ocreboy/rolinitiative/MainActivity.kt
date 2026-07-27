@@ -32,12 +32,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.RequestConfiguration
 import com.ocreboy.rolinitiative.adapter.CharacterAdapter
-import com.ocreboy.rolinitiative.ads.AdManager
 import com.ocreboy.rolinitiative.animations.ButtonAnimationHelper
-import com.ocreboy.rolinitiative.language.LanguageManager
 import com.ocreboy.rolinitiative.popups.PopupDices
 import com.ocreboy.rolinitiative.popups.PopupFolders
 import com.ocreboy.rolinitiative.popups.PopupGreetings
@@ -55,6 +53,7 @@ import com.ocreboy.rolinitiative.utils.TimerHelper
 import com.ocreboy.rolinitiative.utils.TimerUtils
 import org.json.JSONArray
 import org.json.JSONObject
+import uk.co.samuelwall.materialtaptargetprompt.BuildConfig
 import java.io.File
 
 class MainActivity : AppCompatActivity()  {
@@ -145,10 +144,15 @@ class MainActivity : AppCompatActivity()  {
 
         setContentView(R.layout.activity_main)
 
-        //PUBLICIDAD
-        AdManager.loadBanner(
-            findViewById<AdView>(R.id.adView)
-        )
+        MobileAds.initialize(this)
+
+        if (BuildConfig.DEBUG) {
+            val configuration = RequestConfiguration.Builder()
+                .setTestDeviceIds(listOf(AdRequest.DEVICE_ID_EMULATOR))
+                .build()
+
+            MobileAds.setRequestConfiguration(configuration)
+        }
 
 
         soundManager = SoundManager(this)

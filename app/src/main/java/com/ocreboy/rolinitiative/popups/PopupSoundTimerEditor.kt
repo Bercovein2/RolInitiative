@@ -32,7 +32,7 @@ class PopupSoundTimerEditor(private val context: MainActivity) {
     val soundUris: MutableList<Uri?> = mutableListOf()
     var selectedPositionUniqueTimer: Int = -1
 
-    @RequiresApi(Build.VERSION_CODES.R)
+
     @SuppressLint("InflateParams")
     fun showSoundSelectorPopup(mainLayout: View, selectedSoundUri: Uri?) {
 
@@ -218,8 +218,6 @@ class PopupSoundTimerEditor(private val context: MainActivity) {
     }
 
 
-
-    @RequiresApi(Build.VERSION_CODES.R)
     @SuppressLint("InflateParams")
     fun showSoundSelectorAllCharacterPopup(mainLayout: View, selectedSoundFile: Uri?) {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
