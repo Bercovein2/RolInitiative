@@ -14,8 +14,8 @@ android {
         applicationId = "com.ocreboy.rolinitiative"
         minSdk = 29
         targetSdk = 36
-        versionCode = 60
-        versionName = "4.2.0"
+        versionCode = 61
+        versionName = "4.3.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -81,6 +81,4 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.9.0")
     implementation(libs.coil)
 
-    //publicidades
-    implementation("com.google.android.gms:play-services-ads:23.0.0")
 }

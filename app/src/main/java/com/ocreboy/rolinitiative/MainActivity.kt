@@ -31,9 +31,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.RequestConfiguration
 import com.ocreboy.rolinitiative.adapter.CharacterAdapter
 import com.ocreboy.rolinitiative.animations.ButtonAnimationHelper
 import com.ocreboy.rolinitiative.popups.PopupDices
@@ -143,17 +140,6 @@ class MainActivity : AppCompatActivity()  {
         languageManager.loadSavedLanguage(this)
 
         setContentView(R.layout.activity_main)
-
-        MobileAds.initialize(this)
-
-        if (BuildConfig.DEBUG) {
-            val configuration = RequestConfiguration.Builder()
-                .setTestDeviceIds(listOf(AdRequest.DEVICE_ID_EMULATOR))
-                .build()
-
-            MobileAds.setRequestConfiguration(configuration)
-        }
-
 
         soundManager = SoundManager(this)
 //        soundManager.copySoundsToExternalStorage()
