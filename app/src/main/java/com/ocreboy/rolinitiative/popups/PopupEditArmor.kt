@@ -17,6 +17,7 @@ import com.ocreboy.rolinitiative.MainActivity
 import com.ocreboy.rolinitiative.MyApplication
 import com.ocreboy.rolinitiative.R
 import com.ocreboy.rolinitiative.utils.Filters
+import com.ocreboy.rolinitiative.utils.PopupUtils
 import com.ocreboy.rolinitiative.utils.PutIntoString
 
 class PopupEditArmor(private val context: Context) {
@@ -101,6 +102,9 @@ class PopupEditArmor(private val context: Context) {
 
         // Show the popup window
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0)
+
+        PopupUtils.dimBehind(context, popupWindow)
+
     }
 
 

@@ -1,4 +1,4 @@
-package com.ocreboy.rolinitiative
+package com.ocreboy.rolinitiative.filters
 
 import android.text.InputFilter
 import android.text.Spanned

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.PopupWindow
 import com.ocreboy.rolinitiative.utils.FrameColor
 import com.ocreboy.rolinitiative.R
+import com.ocreboy.rolinitiative.utils.PopupUtils
 
 class PopupInfo(private val context: Context) {
 
@@ -24,5 +25,7 @@ class PopupInfo(private val context: Context) {
         popupView.setBackgroundResource(frameColor.getFrameColor())
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
+        PopupUtils.dimBehind(context, popupWindow)
+
     }
 }

@@ -24,7 +24,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import com.ocreboy.rolinitiative.GlobalVariables
-import com.ocreboy.rolinitiative.InputFilterMinMax
+import com.ocreboy.rolinitiative.filters.InputFilterMinMax
 import com.ocreboy.rolinitiative.MainActivity
 import com.ocreboy.rolinitiative.MyApplication
 import com.ocreboy.rolinitiative.R
@@ -36,6 +36,7 @@ import com.ocreboy.rolinitiative.model.SavedCharacter
 import com.ocreboy.rolinitiative.repository.CharacterRepository
 import com.ocreboy.rolinitiative.utils.Filters
 import com.ocreboy.rolinitiative.utils.FrameColor
+import com.ocreboy.rolinitiative.utils.PopupUtils
 import com.ocreboy.rolinitiative.utils.PutIntoString
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -549,6 +550,8 @@ class PopupFolders(private val mainActivity: MainActivity) {
 
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
+        PopupUtils.dimBehind(mainActivity, popupWindow)
+
     }
 
     fun validateInputs() {

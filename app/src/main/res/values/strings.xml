@@ -10,7 +10,6 @@
     <string name="headerArmorClass">Armor</string>
     <string name="headerLife">Life</string>
     <string name="headerInit" translatable="false">Init.</string>
-    <string name="headerKill" translatable="false">Kill</string>
 
     <!-- BUTTONS -->
     <string name="next">Next</string>
@@ -302,5 +301,12 @@
  <string name="app_description">From a lazy DM \nfor lazy DMs</string>
  <string name="add_image" translatable="false">Character Image</string>
  <string name="character_image" translatable="false">Character image to show</string>
-    <string name="share">Share</string>
+ <string name="share">Share</string>
+ <string name="change_campaign">Campaigns</string>
+ <string name="open_campaign">Open Campaign</string>
+    <string name="create_a_campaign_with_the_button">Create a campaign with the + button</string>
+    <string name="create_campaign_text">A new campaign will be created.\n\nUse the current campaign or create one from scratch??\n\nNote: The current campaign will be saved accordingly.</string>
+ <string name="create_new">Create new</string>
+ <string name="use_actual">Use current</string>
+ <string name="new_campaign_title">New campaign</string>
 </resources>

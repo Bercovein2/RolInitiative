@@ -18,6 +18,7 @@ import com.ocreboy.rolinitiative.utils.FrameColor
 import com.ocreboy.rolinitiative.GlobalVariables
 import com.ocreboy.rolinitiative.R
 import com.ocreboy.rolinitiative.RollDice
+import com.ocreboy.rolinitiative.utils.PopupUtils
 
 class PopupDices(private val context: Context) {
 
@@ -140,6 +141,8 @@ class PopupDices(private val context: Context) {
 
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0)
         popupView.setBackgroundResource(frameColor.getFrameColor())
+
+        PopupUtils.dimBehind(context, popupWindow)
 
         popupWindow.setOnDismissListener {
             val quantity = diceQuantity.text.toString().toInt()

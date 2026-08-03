@@ -36,6 +36,7 @@
     <!-- KILL -->
 
     <!-- POP UP INFO -->
+    <string name="kill_character">Kill</string>
     <string name="show_popup_info">Mostra Popup Info</string>
     <string name="close_popup">Chiudi</string>
 
@@ -233,5 +234,12 @@
     <string name="app_description">Da un DM pigro \nper DMs pigri</string>
     <string name="share">Share</string>
     <string name="clear_list">Pulito</string>
+    <string name="change_campaign">Campagne</string>
+    <string name="open_campaign">Lanciare Campagna</string>
+    <string name="create_a_campaign_with_the_button">Crea una campagna utilizzando il pulsante +</string>
+    <string name="create_campaign_text">Verrà creata una nuova campagna.\n\nUtilizzare la campagna attuale o crearne una da zero?\n\nNota: la campagna attuale verrà salvata di conseguenza.</string>
+    <string name="create_new">Crea nuovo</string>
+    <string name="use_actual">Quello corrente</string>
+    <string name="new_campaign_title">"Nuova campagna "</string>
 
 </resources>

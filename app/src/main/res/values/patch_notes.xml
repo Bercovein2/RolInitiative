@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="patchNotes">
-        <b>New Feature: Character Images!</b>\n
-        \t\t- You can now <b>add an image</b> to each character.\n
-        \t\t- Share your character image in other apps like WhatsApp.\n\n
+        <b>New Feature: Campaign Management!</b>\n
+        \t\t- You can now <b>create and save multiple campaigns</b>.\n
+        \t\t- Switch between campaigns whenever you want while keeping each one completely independent.\n\n
 
-        <b>How to add an image to a character:</b>\n
-        \t\t\t- Open a character.\n
-        \t\t\t- Tap the <b>camera icon 📷</b> to select an image from your device.\n
-        \t\t\t- The image will appear in the character preview.\n\n
+        <b>How to create a new campaign:</b>\n
+        \t\t\t- Open the <b>Campaigns</b> menu.\n
+        \t\t\t- Tap the <b>+</b> button.\n
+        \t\t\t- Choose whether to <b>start a new empty campaign</b> or <b>use your current one as a base</b>.\n
+        \t\t\t- Your current campaign will be saved automatically.\n\n
 
-        <b>How to view the image in full screen:</b>\n
-        \t\t\t- Tap the character image.\n
-        \t\t\t- It will open in full screen mode.\n\n
+        <b>How to switch campaigns:</b>\n
+        \t\t\t- Open the <b>Campaigns</b> menu.\n
+        \t\t\t- Select the campaign you want to play.\n
 
-        <b>How to share the image:</b>\n
-        \t\t\t- Open the image in full screen.\n
-        \t\t\t- Tap the <b>share icon</b> at the top right.\n
-        \t\t\t- Choose the app you want to share it with.\n\n
+        <b>Campaign management:</b>\n
+        \t\t\t- Every campaign stores its own characters and progress.\n
+        \t\t\t- You can delete campaigns you no longer need at any time.\n\n
 
-        Make your characters more immersive and personalize your battles like never before!\n
-        <b>Try it now and bring your party to life!</b>
+        Organize your adventures, separate different groups, and keep every story ready to continue whenever you return!\n
+        <b>Create your next adventure and keep every campaign organized!</b>
     </string>
 </resources>

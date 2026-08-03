@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.ocreboy.rolinitiative.MainActivity
 import com.ocreboy.rolinitiative.R
+import com.ocreboy.rolinitiative.utils.PopupUtils
 
 fun PopupHideAllTimers(context: MainActivity, onConfirm: () -> Unit) {
 
@@ -50,4 +51,6 @@ fun PopupHideAllTimers(context: MainActivity, onConfirm: () -> Unit) {
 
     // Mostrar el PopupWindow
     popupWindow.showAtLocation(popupView, android.view.Gravity.CENTER, 0, 0)
+    PopupUtils.dimBehind(context, popupWindow)
+
 }

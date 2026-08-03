@@ -5,8 +5,6 @@
     <string name="headerName">Nombre</string>
     <string name="headerArmorClass">Armadura</string>
     <string name="headerLife">Vida</string>
-    <string name="headerInit">Inic.</string>
-    <string name="headerKill">Matar</string>
 
     <!-- BOTONES -->
     <string name="next">Siguiente</string>
@@ -229,4 +227,11 @@
     <string name="app_description">De un DM vago \npara DMs vagos</string>
     <string name="share">Share</string>
     <string name="clear_list">Limpiar</string>
+    <string name="change_campaign">Campañas</string>
+    <string name="open_campaign">Abrir Campaña</string>
+    <string name="create_a_campaign_with_the_button">Crea una campaña con el boton +</string>
+    <string name="create_campaign_text">Se creará una campaña nueva.\n\n¿Utilizar la campaña actual o crear una desde cero?\n\nNota: La campaña actual se guardará respectivamente.</string>
+    <string name="create_new">Crear nueva</string>
+    <string name="use_actual">Utilizar actual</string>
+    <string name="new_campaign_title">Nueva campaña</string>
 </resources>

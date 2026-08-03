@@ -15,6 +15,7 @@ import com.ocreboy.rolinitiative.utils.AppVersion
 import com.ocreboy.rolinitiative.utils.FrameColor
 import com.ocreboy.rolinitiative.GlobalVariables
 import com.ocreboy.rolinitiative.R
+import com.ocreboy.rolinitiative.utils.PopupUtils
 
 class PopupPatchNotes(private val context: Context) {
 
@@ -65,6 +66,8 @@ class PopupPatchNotes(private val context: Context) {
             if (context is AppCompatActivity && !context.isFinishing) {
                 val rootView = context.window.decorView.rootView
                 popupWindow.showAtLocation(rootView, Gravity.CENTER, 0, 0)
+                PopupUtils.dimBehind(context, popupWindow)
+
                 GlobalVariables.sharedPreferences.edit().putString("ACTUAL_VERSION", AppVersion(context).getAppVersionName()).apply()
                 Log.d("PopupPatchNotes", "Popup window shown successfully")
             } else {

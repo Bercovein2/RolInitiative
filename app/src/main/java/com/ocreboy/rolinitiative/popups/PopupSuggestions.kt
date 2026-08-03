@@ -12,6 +12,7 @@ import android.widget.TextView
 import com.ocreboy.rolinitiative.utils.FrameColor
 import com.ocreboy.rolinitiative.R
 import com.ocreboy.rolinitiative.utils.ClipboardUtils
+import com.ocreboy.rolinitiative.utils.PopupUtils
 
 class PopupSuggestions(private val context: Context) {
 
@@ -45,5 +46,7 @@ class PopupSuggestions(private val context: Context) {
 
         // Muestra el PopupWindow
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
+        PopupUtils.dimBehind(context, popupWindow)
+
     }
 }

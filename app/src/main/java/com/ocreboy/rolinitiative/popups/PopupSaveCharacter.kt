@@ -25,6 +25,7 @@ import com.ocreboy.rolinitiative.model.SavedCharacter
 import com.ocreboy.rolinitiative.repository.CharacterRepository
 import com.ocreboy.rolinitiative.utils.Filters
 import com.ocreboy.rolinitiative.utils.FrameColor
+import com.ocreboy.rolinitiative.utils.PopupUtils
 import com.ocreboy.rolinitiative.utils.PutIntoString
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -241,6 +242,8 @@ class PopupSaveCharacter(private val context: Context) {
 
         // Mostrar el popup en el centro de la vista
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
+        PopupUtils.dimBehind(context, popupWindow)
+
     }
 
     @SuppressLint("InflateParams")

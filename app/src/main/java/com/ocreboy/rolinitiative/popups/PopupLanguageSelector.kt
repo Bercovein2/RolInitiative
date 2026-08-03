@@ -8,6 +8,8 @@ import android.widget.*
 import android.widget.PopupWindow
 import com.ocreboy.rolinitiative.GlobalVariables
 import com.ocreboy.rolinitiative.MainActivity
+import com.ocreboy.rolinitiative.utils.PopupUtils
+
 class PopupLanguageSelector(private val context: MainActivity) {
 
     // Mostrar el popup
@@ -55,6 +57,9 @@ class PopupLanguageSelector(private val context: MainActivity) {
 
         // Mostrar el popup en el centro de la pantalla
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0)
+
+        PopupUtils.dimBehind(context, popupWindow)
+
 
         // Acción del botón Confirmar
         buttonConfirm.setOnClickListener {

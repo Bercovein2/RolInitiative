@@ -5,12 +5,17 @@
         <item
             android:id="@+id/buttonClear"
             android:title="@string/clear_list"
-            android:icon="@drawable/ic_button_clear_list"/>
+            android:icon="@drawable/ic_button_clean_list"/>
 
         <item
             android:id="@+id/buttonAddListToFolder"
             android:title="@string/add_all_to_folder"
             android:icon="@drawable/ic_diskette"/>
+
+        <item
+            android:id="@+id/buttonChangeCampaign"
+            android:title="@string/change_campaign"
+            android:icon="@drawable/ic_button_change_campaign"/>
 
         <item
             android:id="@+id/buttonInfo"

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="patchNotes">
-        <b>¡Nueva función: Imágenes de personajes!</b>\n
-        \t\t- Ahora puedes <b>añadir una imagen</b> a cada personaje.\n
-        \t\t- Comparte la imagen de tu personaje en otras apps como WhatsApp.\n\n
+        <b>¡Nueva funcionalidad: Gestión de campañas!</b>\n
+        \t\t- Ahora puedes <b>crear y guardar múltiples campañas</b>.\n
+        \t\t- Cambia entre campañas cuando quieras manteniendo cada una completamente independiente.\n\n
 
-        <b>Cómo añadir una imagen a un personaje:</b>\n
-        \t\t\t- Abre un personaje.\n
-        \t\t\t- Toca el <b>icono de la cámara 📷</b> para seleccionar una imagen de tu dispositivo.\n
-        \t\t\t- La imagen aparecerá en la vista previa del personaje.\n\n
+        <b>Cómo crear una nueva campaña:</b>\n
+        \t\t\t- Abre el menú de <b>Campañas</b>.\n
+        \t\t\t- Presiona el botón <b>+</b>.\n
+        \t\t\t- Elige si deseas <b>comenzar una campaña nueva desde cero</b> o <b>utilizar la campaña actual como base</b>.\n
+        \t\t\t- La campaña actual se guardará automáticamente.\n\n
 
-        <b>Cómo ver la imagen en pantalla completa:</b>\n
-        \t\t\t- Toca la imagen del personaje.\n
-        \t\t\t- Se abrirá en pantalla completa.\n\n
+        <b>Cómo cambiar de campaña:</b>\n
+        \t\t\t- Abre el menú de <b>Campañas</b>.\n
+        \t\t\t- Selecciona la campaña que deseas jugar.\n
 
-        <b>Cómo compartir la imagen:</b>\n
-        \t\t\t- Abre la imagen en pantalla completa.\n
-        \t\t\t- Toca el <b>Ícono para compartir</b> en la esquina superior derecha.\n
-        \t\t\t- Elige la app con la que quieres compartirlo.\n\n
+        <b>Gestión de campañas:</b>\n
+        \t\t\t- Cada campaña conserva sus propios personajes y su progreso.\n
+        \t\t\t- Puedes eliminar las campañas que ya no necesites en cualquier momento.\n\n
 
-        ¡Haz que tus personajes sean más inmersivos y personaliza tus batallas como nunca antes!\n
-        <b>¡Pruébalo ahora y dale vida a tu grupo!</b>
+        ¡Organiza tus aventuras, separa tus distintos grupos y mantén cada historia lista para continuar cuando lo desees!\n
+        <b>¡Crea tu próxima aventura y mantén todas tus campañas perfectamente organizadas!</b>
     </string>
 </resources>

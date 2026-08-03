@@ -9,6 +9,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.ocreboy.rolinitiative.model.Campaign
+import com.ocreboy.rolinitiative.popups.PopupCampaigns
 import com.ocreboy.rolinitiative.popups.PopupLanguageSelector
 import com.ocreboy.rolinitiative.popups.PopupInfo
 import com.ocreboy.rolinitiative.popups.PopupPatchNotes
@@ -73,7 +75,7 @@ class MenuHandler(
                 mainActivity.hideKeyboardIfOpen()
                 mainActivity.tutorialManager.showCharacterInputsTutorial()
                 true
-            }
+                }
                 R.id.buttonClear -> {
                     mainActivity.buttonClear()
                     closeDrawer()
@@ -110,6 +112,24 @@ class MenuHandler(
                 }
                 R.id.buttonChangeLanguage -> {
                     PopupLanguageSelector(mainActivity).show()
+                    closeDrawer()
+                    mainActivity.hideKeyboardIfOpen()
+                    true
+                }
+                R.id.buttonChangeCampaign -> {
+                    val popup = PopupCampaigns(
+                        mainActivity = mainActivity,
+                        campaigns = mutableListOf(
+                            Campaign(1, "Curse of Strahd"),
+                            Campaign(2, "Lost Mine of Phandelver"),
+                            Campaign(3, "Homebrew Campaign")
+                        ),
+                        onCampaignSelected = { campaign ->
+                            // TODO
+                        }
+                    )
+
+                    popup.show(mainActivity.window.decorView)
                     closeDrawer()
                     mainActivity.hideKeyboardIfOpen()
                     true

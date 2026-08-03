@@ -2,7 +2,7 @@ package com.ocreboy.rolinitiative.utils
 
 import android.text.InputFilter
 import com.ocreboy.rolinitiative.GlobalVariables
-import com.ocreboy.rolinitiative.InputFilterMinMax
+import com.ocreboy.rolinitiative.filters.InputFilterMinMax
 import com.ocreboy.rolinitiative.MyApplication
 
 class Filters {

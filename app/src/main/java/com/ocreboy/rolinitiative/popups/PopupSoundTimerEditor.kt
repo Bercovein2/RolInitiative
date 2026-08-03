@@ -21,6 +21,7 @@ import com.ocreboy.rolinitiative.R
 import com.ocreboy.rolinitiative.sounds.SoundAdapter
 import com.ocreboy.rolinitiative.sounds.SoundManager
 import com.ocreboy.rolinitiative.sounds.SoundPlayer
+import com.ocreboy.rolinitiative.utils.PopupUtils
 import com.ocreboy.rolinitiative.utils.PutIntoString
 
 class PopupSoundTimerEditor(private val context: MainActivity) {
@@ -112,6 +113,8 @@ class PopupSoundTimerEditor(private val context: MainActivity) {
         Toast.makeText(context, R.string.manage_session_sound_timer, Toast.LENGTH_SHORT).show()
 
         popupWindow.showAtLocation(mainLayout, Gravity.CENTER, 0, 0)
+        PopupUtils.dimBehind(context, popupWindow)
+
     }
 
     @RequiresApi(Build.VERSION_CODES.R)

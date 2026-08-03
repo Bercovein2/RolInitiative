@@ -13,6 +13,7 @@ import android.widget.Toast
 import com.ocreboy.rolinitiative.utils.FrameColor
 import com.ocreboy.rolinitiative.GlobalVariables
 import com.ocreboy.rolinitiative.R
+import com.ocreboy.rolinitiative.utils.PopupUtils
 
 class PopupNotes (private val context: Context){
 
@@ -61,6 +62,7 @@ class PopupNotes (private val context: Context){
         val dialog = builder.create()
         dialog.show()
         dialog.window?.setBackgroundDrawableResource(frameColor.getFrameColor())
+
 
         buttonClose.setOnClickListener {
             dialog.dismiss()
