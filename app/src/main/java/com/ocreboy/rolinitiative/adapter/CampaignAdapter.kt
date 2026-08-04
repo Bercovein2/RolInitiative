@@ -38,7 +38,6 @@ class CampaignAdapter(
     override fun getItemCount() = campaigns.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Log.d("CampaignAdapter", "Binding posición $position")
         val campaign = campaigns[position]
 
         holder.name.text = campaign.name
@@ -57,18 +56,12 @@ class CampaignAdapter(
         )
 
         holder.itemView.setOnClickListener {
-
-            if (isSelectionMode()) {
-                toggleSelection(holder.adapterPosition)
-            } else {
-                listener.onCampaignClick(campaign)
-            }
+            // Always toggle selection when a campaign is clicked
+            toggleSelection(holder.adapterPosition)
         }
 
         holder.itemView.setOnLongClickListener {
-
             toggleSelection(holder.adapterPosition)
-
             true
         }
     }
@@ -93,9 +86,7 @@ class CampaignAdapter(
     fun clearSelection() {
 
         selectedPositions.clear()
-
         notifyDataSetChanged()
-
         listener.onSelectionChanged(false, 0)
     }
 
@@ -116,5 +107,12 @@ class CampaignAdapter(
         clearSelection()
 
         notifyDataSetChanged()
+    }
+
+    fun selectAll() {
+        selectedPositions.clear()
+        campaigns.forEachIndexed { index, _ -> selectedPositions.add(index) }
+        notifyDataSetChanged()
+        listener.onSelectionChanged(true, selectedPositions.size)
     }
 }

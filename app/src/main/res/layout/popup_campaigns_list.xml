@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginTop="16dp"
-            android:text="My Campaigns"
+            android:text="@string/my_campaigns"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
@@ -69,33 +69,57 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/buttonDeleteCampaign"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/round_button_background"
-            android:backgroundTint="@color/darkRed"
-            android:contentDescription="@string/deleteDescription"
-            android:padding="10dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_trash"
-            android:enabled="false"/>
-
-        <Space
+        <Button
+            android:id="@+id/buttonSelectAll"
             android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/select_all"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="14sp"
+            android:autoSizeStepGranularity="1sp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/buttonSelectNone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/select_none"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="14sp"
+            android:autoSizeStepGranularity="1sp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/buttonDeleteCampaign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/delete"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="14sp"
+            android:autoSizeStepGranularity="1sp"
+            android:singleLine="true"
+            android:enabled="false" />
 
         <Button
             android:id="@+id/buttonOpenCampaign"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="@string/open_campaign"/>
+            android:layout_weight="1"
+            android:text="@string/open"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="14sp"
+            android:autoSizeStepGranularity="1sp"
+            android:singleLine="true" />
     </LinearLayout>
 
 </LinearLayout>

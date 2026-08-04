@@ -234,4 +234,10 @@
     <string name="create_new">Crear nueva</string>
     <string name="use_actual">Utilizar actual</string>
     <string name="new_campaign_title">Nueva campaña</string>
+    <string name="my_campaigns">Mis campañas</string>
+    <string name="selected_campaign">seleccionado/s</string>
+    <string name="open">Abrir</string>
+    <string name="delete">Eliminar</string>
+    <string name="select_all">Todo</string>
+    <string name="select_none">Ninguno</string>
 </resources>

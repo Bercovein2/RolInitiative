@@ -38,7 +38,9 @@ class PopupCampaigns(
     private lateinit var recyclerView: RecyclerView
     private lateinit var buttonClose: ImageButton
     private lateinit var buttonCreate: ImageButton
-    private lateinit var buttonDelete: ImageButton
+    private lateinit var buttonSelectAll: Button
+    private lateinit var buttonSelectNone: Button
+    private lateinit var buttonDelete: Button
     private lateinit var buttonOpen: Button
     private lateinit var textEmpty: TextView
     private lateinit var textTitle: TextView
@@ -82,105 +84,86 @@ class PopupCampaigns(
     }
 
     private fun bindViews(view: View) {
-
         recyclerView = view.findViewById(R.id.recyclerViewCampaigns)
-
         buttonClose = view.findViewById(R.id.buttonCampaignClose)
         buttonCreate = view.findViewById(R.id.buttonCampaignCreate)
         buttonDelete = view.findViewById(R.id.buttonDeleteCampaign)
         buttonOpen = view.findViewById(R.id.buttonOpenCampaign)
-
+        buttonSelectAll = view.findViewById(R.id.buttonSelectAll)
+        buttonSelectNone = view.findViewById(R.id.buttonSelectNone)
         textEmpty = view.findViewById(R.id.textViewEmptyCampaigns)
         textTitle = view.findViewById(R.id.textViewCampaignTitle)
-
     }
 
     private fun setupRecycler() {
-
         adapter = CampaignAdapter(object : CampaignAdapter.Listener {
 
             override fun onCampaignClick(campaign: Campaign) {
-
                 onCampaignSelected(campaign)
-                popupWindow.dismiss()
-
+                // Eliminar esta línea para evitar que el popup se cierre
+                // popupWindow.dismiss()
             }
 
-            override fun onSelectionChanged(
-                selectionMode: Boolean,
-                selectedCount: Int
-            ) {
+            override fun onSelectionChanged(selectionMode: Boolean, selectedCount: Int) {
+                textTitle.text = if (selectionMode) "$selectedCount " + mainActivity.getString(R.string.selected_campaign) else mainActivity.getString(R.string.my_campaigns)
 
-                buttonDelete.visibility =
-                    if (selectionMode)
-                        View.VISIBLE
-                    else
-                        View.GONE
-
-                buttonOpen.visibility =
-                    if (selectionMode)
-                        View.GONE
-                    else
-                        View.VISIBLE
-
-                textTitle.text =
-                    if (selectionMode)
-                        "$selectedCount selected"
-                    else
-                        "My Campaigns"
+                when {
+                    selectedCount == 0 -> {
+                        enableOpenButton(false)
+                        enableDeleteButton(false)
+                    }
+                    selectedCount == 1 -> {
+                        enableOpenButton(true)
+                        enableDeleteButton(true)
+                    }
+                    selectedCount > 1 -> {
+                        enableOpenButton(false)
+                        enableDeleteButton(true)
+                    }
+                }
             }
-
         })
 
         recyclerView.layoutManager = LinearLayoutManager(mainActivity)
         recyclerView.adapter = adapter
-
     }
 
     private fun setupButtons() {
-
         frameColor.changeVectorColorDarkLightGray(buttonCreate)
-        this.enableOpenButton(false)
-        this.enableDeleteButton(false)
+        enableOpenButton(false)
+        enableDeleteButton(false)
 
-        buttonClose.setOnClickListener {
-
-            popupWindow.dismiss()
-
-        }
+        buttonClose.setOnClickListener { popupWindow.dismiss() }
 
         buttonCreate.setOnClickListener {
-
             PopupCreateCampaign(
                 mainActivity,
-                onCreateNew = {
-                    // Crear una campaña desde cero
-                },
-                onUseCurrent = {
-                    // Guardar la actual y utilizarla
-                }
+                onCreateNew = { /* Create a new campaign */ },
+                onUseCurrent = { /* Save and use the current campaign */ }
             ).show()
-
         }
 
         buttonDelete.setOnClickListener {
-
-            deleteSelectedCampaigns()
-
+            val selectedCampaigns = adapter.getSelectedCampaigns()
+            if (selectedCampaigns.isNotEmpty()) {
+                showDeleteConfirmationDialog(selectedCampaigns)
+            }
         }
 
         buttonOpen.setOnClickListener {
-
             adapter.getSingleSelected()?.let {
-
                 onCampaignSelected(it)
-
                 popupWindow.dismiss()
-
             }
-
         }
 
+        buttonSelectAll.setOnClickListener {
+            adapter.selectAll()
+        }
+
+        buttonSelectNone.setOnClickListener {
+            adapter.clearSelection()
+        }
     }
 
     private fun enableOpenButton (isAnySelected: Boolean){
@@ -198,18 +181,46 @@ class PopupCampaigns(
 
     }
 
-    private fun deleteSelectedCampaigns() {
+    private fun deleteSelectedCampaigns(selectedCampaigns : List<Campaign>) {
 
-        val selected = adapter.getSelectedCampaigns()
+        if (selectedCampaigns.isNotEmpty()) {
+            coroutineScope.launch(Dispatchers.IO) {
+                try {
+                    // Eliminar campañas de la base de datos
+                    repository.deleteCampaignsByIds(selectedCampaigns.map { it.id })
 
-        campaigns.removeAll(selected.toSet())
+                    withContext(Dispatchers.Main) {
+                        // Eliminar campañas de la lista local
+                        campaigns.removeAll(selectedCampaigns.toSet())
+                        adapter.submitList(campaigns.toList())
 
-        adapter.submitList(campaigns)
+                        // Actualizar visibilidad del texto vacío
+                        textEmpty.visibility = if (campaigns.isEmpty()) View.VISIBLE else View.GONE
+                    }
+                } catch (e: Exception) {
+                    Log.e("PopupCampaign", "Error al eliminar campañas", e)
+                }
+            }
+        }
 
     }
 
     private fun mockCampaigns(): MutableList<Campaign> {
         val mockCampaigns: MutableList<Campaign> = mutableListOf(
+            Campaign(id = 1, name = "Campaign 1"),
+            Campaign(id = 2, name = "Campaign 2"),
+            Campaign(id = 1, name = "Campaign 1"),
+            Campaign(id = 2, name = "Campaign 2"),
+            Campaign(id = 1, name = "Campaign 1"),
+            Campaign(id = 2, name = "Campaign 2"),
+            Campaign(id = 1, name = "Campaign 1"),
+            Campaign(id = 2, name = "Campaign 2"),
+            Campaign(id = 1, name = "Campaign 1"),
+            Campaign(id = 2, name = "Campaign 2"),
+            Campaign(id = 1, name = "Campaign 1"),
+            Campaign(id = 2, name = "Campaign 2"),
+            Campaign(id = 1, name = "Campaign 1"),
+            Campaign(id = 2, name = "Campaign 2"),
             Campaign(id = 1, name = "Campaign 1"),
             Campaign(id = 2, name = "Campaign 2"),
             Campaign(id = 3, name = "Campaign 3")
@@ -240,6 +251,20 @@ class PopupCampaigns(
                 Log.e("POPUP", "Error", e)
             }
         }
+    }
+
+    private fun showDeleteConfirmationDialog(selectedCampaigns: List<Campaign>) {
+        val builder = androidx.appcompat.app.AlertDialog.Builder(mainActivity)
+        builder.setTitle(R.string.accept_buttons)
+        builder.setMessage("¿Está seguro que desea eliminar la/s campaña/s seleccionada/s?")
+        builder.setPositiveButton("Eliminar") { _, _ ->
+            // Llamar al método para eliminar campañas
+            deleteSelectedCampaigns(selectedCampaigns)
+        }
+        builder.setNegativeButton(R.string.cancel_buttons) { dialog, _ ->
+            dialog.dismiss()
+        }
+        builder.create().show()
     }
 
 }
