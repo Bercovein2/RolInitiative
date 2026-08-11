@@ -315,4 +315,10 @@
  <string name="delete">Delete</string>
     <string name="select_all">All</string>
  <string name="select_none">None</string>
+    <string name="campaign_name_required_title">Campaign name required</string>
+ <string name="campaign_name_hint">Campaign name</string>
+    <string name="campaign_saved_success">Campaign successfully saved.</string>
+ <string name="campaign_saved_error">Error saving the campaign</string>
+ <string name="campaign_delete_question">Are you sure you want to delete the selected campaign(s)?</string>
+ <string name="sure_to_restart_question">Are you sure you want to restart turns? It will only restart the turn count, not stat changes</string>
 </resources>

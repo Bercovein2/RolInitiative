@@ -6,16 +6,21 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ocreboy.rolinitiative.Character
 import com.ocreboy.rolinitiative.MainActivity
 import com.ocreboy.rolinitiative.adapter.CampaignAdapter
 import com.ocreboy.rolinitiative.database.CampaignDatabase
+import com.ocreboy.rolinitiative.database.PlayingCharacterDatabase
 import com.ocreboy.rolinitiative.model.Campaign
+import com.ocreboy.rolinitiative.model.PlayingCharacter
 import com.ocreboy.rolinitiative.repository.CampaignRepository
+import com.ocreboy.rolinitiative.repository.PlayingCharacterRepository
 import com.ocreboy.rolinitiative.utils.FrameColor
 import com.ocreboy.rolinitiative.utils.PopupUtils
 import kotlinx.coroutines.CoroutineScope
@@ -30,7 +35,8 @@ class PopupCampaigns(
     private var campaigns: MutableList<Campaign>,
     private val onCampaignSelected: (Campaign) -> Unit
 ) {
-    private val repository: CampaignRepository
+    private val campaignRepository: CampaignRepository
+    private val playersRepository: PlayingCharacterRepository
     private val coroutineScope = CoroutineScope(Dispatchers.Main + Job())
 
     private lateinit var popupWindow: PopupWindow
@@ -50,7 +56,9 @@ class PopupCampaigns(
 
     init {
         val dbCampaign = CampaignDatabase.invoke(mainActivity)
-        repository = CampaignRepository(dbCampaign)
+        val dbPlayingCharacter = PlayingCharacterDatabase.invoke(mainActivity)
+        campaignRepository = CampaignRepository(dbCampaign)
+        playersRepository = PlayingCharacterRepository(dbPlayingCharacter)
     }
 
     fun show(anchor: View) {
@@ -139,7 +147,7 @@ class PopupCampaigns(
             PopupCreateCampaign(
                 mainActivity,
                 onCreateNew = { /* Create a new campaign */ },
-                onUseCurrent = { /* Save and use the current campaign */ }
+                onUseCurrent = { saveCurrentCampaign()}
             ).show()
         }
 
@@ -151,9 +159,54 @@ class PopupCampaigns(
         }
 
         buttonOpen.setOnClickListener {
-            adapter.getSingleSelected()?.let {
-                onCampaignSelected(it)
-                popupWindow.dismiss()
+            adapter.getSingleSelected()?.let { selectedCampaign ->
+                coroutineScope.launch(Dispatchers.IO) {
+                    try {
+                        // Obtener la campaña seleccionada (opcional si necesitas más datos)
+                        val campaign = campaignRepository.getCampaignById(selectedCampaign.id)
+
+                        // Obtener los personajes asociados a la campaña
+                        val playingCharacters = playersRepository.getPlayersByCampaignId(selectedCampaign.id)
+
+                        withContext(Dispatchers.Main) {
+                            // Limpiar la lista actual de personajes
+                            mainActivity.characterList.clear()
+
+                            // Convertir los PlayingCharacters a Character y agregarlos a la lista principal
+                            val characters = playingCharacters.map { playingCharacter ->
+                                Character(
+                                    name = playingCharacter.name,
+                                    initiative = playingCharacter.initiative,
+                                    armorClass = playingCharacter.armorClass,
+                                    armorTouch = playingCharacter.armorTouch,
+                                    armorFlatFooted = playingCharacter.armorFlatFooted,
+                                    isSelected = playingCharacter.isSelected,
+                                    life = playingCharacter.life,
+                                    isDead = playingCharacter.isDead,
+                                    hasActiveTimer = playingCharacter.hasActiveTimer,
+                                    isPaused = playingCharacter.isPaused,
+                                    timeLeftInSeconds = playingCharacter.timeLeftInSeconds,
+                                    originalTimer = playingCharacter.originalTimer,
+                                    isTimerRunning = playingCharacter.isTimerRunning,
+                                    timerSoundName = playingCharacter.timerSoundName,
+                                    imageUri = playingCharacter.imageUri
+                                )
+                            }
+                            mainActivity.characterList.addAll(characters)
+
+                            // Notificar al adaptador para actualizar la vista
+                            mainActivity.characterAdapter.notifyDataSetChanged()
+
+                            // Actualizar el nombre de la campaña en la pantalla principal
+                            mainActivity.editGameName.setText(campaign.name)
+
+                            // Cerrar el popup
+                            popupWindow.dismiss()
+                        }
+                    } catch (e: Exception) {
+                        Log.e("PopupCampaigns", "Error al cargar la campaña", e)
+                    }
+                }
             }
         }
 
@@ -187,7 +240,9 @@ class PopupCampaigns(
             coroutineScope.launch(Dispatchers.IO) {
                 try {
                     // Eliminar campañas de la base de datos
-                    repository.deleteCampaignsByIds(selectedCampaigns.map { it.id })
+                    playersRepository.deletePlayersByCampaignId(selectedCampaigns.map { it.id })
+
+                    campaignRepository.deleteCampaignsByIds(selectedCampaigns.map { it.id })
 
                     withContext(Dispatchers.Main) {
                         // Eliminar campañas de la lista local
@@ -207,23 +262,23 @@ class PopupCampaigns(
 
     private fun mockCampaigns(): MutableList<Campaign> {
         val mockCampaigns: MutableList<Campaign> = mutableListOf(
-            Campaign(id = 1, name = "Campaign 1"),
-            Campaign(id = 2, name = "Campaign 2"),
-            Campaign(id = 1, name = "Campaign 1"),
-            Campaign(id = 2, name = "Campaign 2"),
-            Campaign(id = 1, name = "Campaign 1"),
-            Campaign(id = 2, name = "Campaign 2"),
-            Campaign(id = 1, name = "Campaign 1"),
-            Campaign(id = 2, name = "Campaign 2"),
-            Campaign(id = 1, name = "Campaign 1"),
-            Campaign(id = 2, name = "Campaign 2"),
-            Campaign(id = 1, name = "Campaign 1"),
-            Campaign(id = 2, name = "Campaign 2"),
-            Campaign(id = 1, name = "Campaign 1"),
-            Campaign(id = 2, name = "Campaign 2"),
-            Campaign(id = 1, name = "Campaign 1"),
-            Campaign(id = 2, name = "Campaign 2"),
-            Campaign(id = 3, name = "Campaign 3")
+            Campaign(id = 1, name = "Campaign 1", null),
+            Campaign(id = 2, name = "Campaign 2", null),
+            Campaign(id = 1, name = "Campaign 1", null),
+            Campaign(id = 2, name = "Campaign 2", null),
+            Campaign(id = 1, name = "Campaign 1", null),
+            Campaign(id = 2, name = "Campaign 2", null),
+            Campaign(id = 1, name = "Campaign 1", null),
+            Campaign(id = 2, name = "Campaign 2", null),
+            Campaign(id = 1, name = "Campaign 1", null),
+            Campaign(id = 2, name = "Campaign 2", null),
+            Campaign(id = 1, name = "Campaign 1", null),
+            Campaign(id = 2, name = "Campaign 2", null),
+            Campaign(id = 1, name = "Campaign 1", null),
+            Campaign(id = 2, name = "Campaign 2", null),
+            Campaign(id = 1, name = "Campaign 1", null),
+            Campaign(id = 2, name = "Campaign 2", null),
+            Campaign(id = 3, name = "Campaign 3", null)
         )
         return mockCampaigns
     }
@@ -232,7 +287,7 @@ class PopupCampaigns(
         Log.d("PopupCampaign", "Entró a loadCampaignsFromDatabase")
         coroutineScope.launch(Dispatchers.IO) {
             try {
-                val campaignsFromDb = repository.getAllCampaigns()
+                val campaignsFromDb = campaignRepository.getAllCampaigns()
 
                 withContext(Dispatchers.Main) {
                     campaigns.clear()
@@ -256,8 +311,8 @@ class PopupCampaigns(
     private fun showDeleteConfirmationDialog(selectedCampaigns: List<Campaign>) {
         val builder = androidx.appcompat.app.AlertDialog.Builder(mainActivity)
         builder.setTitle(R.string.accept_buttons)
-        builder.setMessage("¿Está seguro que desea eliminar la/s campaña/s seleccionada/s?")
-        builder.setPositiveButton("Eliminar") { _, _ ->
+        builder.setMessage(mainActivity.getString(R.string.campaign_delete_question))
+        builder.setPositiveButton(mainActivity.getString(R.string.delete)) { _, _ ->
             // Llamar al método para eliminar campañas
             deleteSelectedCampaigns(selectedCampaigns)
         }
@@ -267,4 +322,91 @@ class PopupCampaigns(
         builder.create().show()
     }
 
+    private fun saveCurrentCampaign() {
+        var campaignName = mainActivity.editGameName.text.toString().trim()
+        var actualCampaignTimer = mainActivity.timerTextView.text.toString().trim()
+
+        if (campaignName.isEmpty()) {
+            showNameRequiredDialog()
+            return
+        }
+
+        val characters = mainActivity.characterList
+
+        coroutineScope.launch(Dispatchers.IO) {
+            try {
+                // Crear una nueva campaña
+                val newCampaign = Campaign(0,name = campaignName, actualCampaignTimer)
+
+                // Guardar la campaña en la base de datos
+                val campaignId = campaignRepository.insert(newCampaign)
+
+                // Convertir los personajes a PlayingCharacter y asignarles el campaignId
+                val playingCharacters = convertCharactersToPlayingCharacters(characters, campaignId)
+
+                playingCharacters.forEach {
+                    playersRepository.insert(it)
+                }
+
+                withContext(Dispatchers.Main) {
+                    Log.d("PopupCampaigns", mainActivity.getString(R.string.campaign_saved_success))
+                    popupWindow.dismiss()
+                }
+            } catch (e: Exception) {
+                Log.e("PopupCampaigns", mainActivity.getString(R.string.campaign_saved_error), e)
+            }
+        }
+    }
+
+    private fun convertCharactersToPlayingCharacters(characters: List<Character>, campaignId: Long): List<PlayingCharacter> {
+        return characters.mapIndexed { index, character ->
+            PlayingCharacter(
+                id = 0,
+                name = character.name,
+                initiative = character.initiative,
+                armorClass = character.armorClass,
+                armorTouch = character.armorTouch,
+                armorFlatFooted = character.armorFlatFooted,
+                isSelected = character.isSelected,
+                life = character.life,
+                isDead = character.isDead,
+                hasActiveTimer = character.hasActiveTimer,
+                isPaused = character.isPaused,
+                timeLeftInSeconds = character.timeLeftInSeconds,
+                originalTimer = character.originalTimer,
+                isTimerRunning = character.isTimerRunning,
+                timerSoundName = character.timerSoundName,
+                imageUri = character.imageUri,
+                order = index + 1, // Asignar el orden ascendente
+                campaignId = campaignId
+            )
+        }
+    }
+
+    private fun showNameRequiredDialog() {
+        val dialogView = LayoutInflater.from(mainActivity).inflate(R.layout.dialog_input_name, null)
+        val editTextCampaignName = dialogView.findViewById<EditText>(R.id.editTextCampaignName)
+
+        val builder = androidx.appcompat.app.AlertDialog.Builder(mainActivity)
+        builder.setTitle(R.string.campaign_name_required_title)
+        builder.setView(dialogView)
+        builder.setPositiveButton(R.string.accept_buttons) { dialog, _ ->
+            val inputName = editTextCampaignName.text.toString().trim()
+            if (inputName.isNotEmpty()) {
+                mainActivity.editGameName.setText(inputName)
+                saveCurrentCampaign()
+            } else {
+                showNameRequiredDialog() // Reopen if input is empty
+            }
+            mainActivity.hideKeyboardIfOpen()
+            dialog.dismiss()
+
+
+        }
+        builder.setNegativeButton(R.string.cancel_buttons) { dialog, _ ->
+            mainActivity.hideKeyboardIfOpen()
+            dialog.dismiss()
+        }
+        builder.create().show()
+    }
 }

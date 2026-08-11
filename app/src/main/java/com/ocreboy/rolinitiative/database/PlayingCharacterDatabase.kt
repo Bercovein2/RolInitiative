@@ -7,16 +7,16 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.ocreboy.rolinitiative.model.Campaign
+import com.ocreboy.rolinitiative.model.PlayingCharacter
 
-@Database(entities = [Campaign::class], version = 4,
-    exportSchema = false)
-abstract class CampaignDatabase : RoomDatabase() {
+@Database(entities = [PlayingCharacter::class], version = 4)
+abstract class PlayingCharacterDatabase : RoomDatabase() {
 
-    abstract fun getDao(): CampaignDao
+    abstract fun getDao(): PlayingCharacterDao
 
     companion object {
         @Volatile
-        private var instance: CampaignDatabase? = null
+        private var instance: PlayingCharacterDatabase? = null
         private val LOCK = Any()
 
         operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
@@ -28,11 +28,10 @@ abstract class CampaignDatabase : RoomDatabase() {
         private fun createDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext,
-                CampaignDatabase::class.java,
-                "campaign_db"
+                PlayingCharacterDatabase::class.java,
+                "playing_character_db"
             )
                 .fallbackToDestructiveMigration()
                 .build()
     }
-
 }

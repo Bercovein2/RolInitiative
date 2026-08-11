@@ -19,5 +19,6 @@ class CampaignRepository(
 
     suspend fun deleteCampaignsByIds(ids: List<Int>) = campaignDB.getDao().deleteCampaignsByIds(ids)
 
-    fun searchCampaigns(query: String?) = campaignDB.getDao().search(query)
+    suspend fun searchCampaigns(query: String?) = campaignDB.getDao().search(query)
+    suspend fun getCampaignById(id: Int): Campaign = campaignDB.getDao().getCampaignById(id)
 }

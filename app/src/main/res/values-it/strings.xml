@@ -36,7 +36,6 @@
     <!-- KILL -->
 
     <!-- POP UP INFO -->
-    <string name="kill_character">Kill</string>
     <string name="show_popup_info">Mostra Popup Info</string>
     <string name="close_popup">Chiudi</string>
 
@@ -247,5 +246,11 @@
     <string name="delete">Eliminare</string>
     <string name="select_all">Tutto</string>
     <string name="select_none">Nessuno</string>
+    <string name="campaign_name_required_title">Nome della campagna obbligatorio</string>
+    <string name="campaign_name_hint">Nome della campagna</string>
+    <string name="campaign_saved_success">Campagna salvata con successo.</string>
+    <string name="campaign_saved_error">Errore durante il salvataggio della campagna</string>
+    <string name="campaign_delete_question">Sei sicuro di voler eliminare la/le campagna/e selezionata/e?</string>
+    <string name="sure_to_restart_question">Sei sicuro di voler resettare i turni?\\nVerrà azzerato solo il contatore dei turni, non le modifiche alle statistiche.</string>
 
 </resources>

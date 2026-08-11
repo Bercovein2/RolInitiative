@@ -120,9 +120,9 @@ class MenuHandler(
                     val popup = PopupCampaigns(
                         mainActivity = mainActivity,
                         campaigns = mutableListOf(
-                            Campaign(1, "Curse of Strahd"),
-                            Campaign(2, "Lost Mine of Phandelver"),
-                            Campaign(3, "Homebrew Campaign")
+                            Campaign(1, "Curse of Strahd", null),
+                            Campaign(2, "Lost Mine of Phandelver", null),
+                            Campaign(3, "Homebrew Campaign", null)
                         ),
                         onCampaignSelected = { campaign ->
                             // TODO

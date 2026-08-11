@@ -10,6 +10,6 @@ import kotlinx.parcelize.Parcelize
 data class Campaign(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    var name: String
-
+    var name: String,
+    var timer: String?
 ): Parcelable

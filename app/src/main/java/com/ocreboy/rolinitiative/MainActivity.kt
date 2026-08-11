@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity()  {
     private lateinit var buttonStartNext: Button
     private lateinit var buttonRollDice: ImageButton
     private lateinit var buttonRestart: Button
-    private lateinit var editGameName : EditText
+    lateinit var editGameName : EditText
     private lateinit var buttonNotes: ImageButton
     private lateinit var turnCounter: TextView
     private lateinit var textRound: TextView
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity()  {
     lateinit var itemTimer: View
     lateinit var buttonToggleTimer: ImageButton
     lateinit var timerHelper: TimerHelper
-    private lateinit var timerTextView: TextView
+    lateinit var timerTextView: TextView
     private var isTimerRunning = false
     private var timerDuration = 0L // Duración en milisegundos
     private var isTimerVisible = false
@@ -667,10 +667,10 @@ class MainActivity : AppCompatActivity()  {
             // Crear el AlertDialog
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Confirm Action")
-            builder.setMessage("Are you sure you want to restart turns?\nIt will only restart the turn count, not stat changes")
+            builder.setMessage(getString(R.string.sure_to_restart_question))
 
             // Botón Accept
-            builder.setPositiveButton("Accept") { dialog, _ ->
+            builder.setPositiveButton(getString(R.string.accept_buttons)) { dialog, _ ->
                 // Realizar la acción de limpiar la lista
 
                 resetList()
@@ -1008,7 +1008,6 @@ class MainActivity : AppCompatActivity()  {
         // Crear el AlertDialog
         val builder = AlertDialog.Builder(this)
         builder.setTitle(R.string.confirm_action)
-        builder.setMessage("Are you sure you want to clear the character list? \nRemember: it will erase only actual fight, not characters in folders")
         builder.setMessage(R.string.are_you_sure_to_clear_character_list)
 
         // Botón Accept

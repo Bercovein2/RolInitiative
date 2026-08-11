@@ -14,10 +14,11 @@ android {
         applicationId = "com.ocreboy.rolinitiative"
         minSdk = 29
         targetSdk = 36
-        versionCode = 62
-        versionName = "5.1.0"
+        versionCode = 64
+        versionName = "5.3.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = true
     }
 
     bundle {
@@ -56,29 +57,25 @@ dependencies {
 
     // ROOM
     implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.androidx.room.ktx)
 
     // Navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-    // Life Cycle Arch
+    // Life Cycle Arch & LiveData
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-
-    // LiveData
     implementation(libs.androidx.lifecycle.livedata.ktx)
-
-    // Annotation processor
     ksp(libs.androidx.lifecycle.compiler)
 
-    //Showcase View
+    // UI components
     implementation(libs.material.tap.target.prompt)
-
-    implementation("androidx.activity:activity-ktx:1.9.0")
     implementation(libs.coil)
 
+    // Si necesitas activity-ktx, añádela a tu libs.versions.toml o mantenla limpia:
+    implementation("androidx.activity:activity-ktx:1.9.0")
 }

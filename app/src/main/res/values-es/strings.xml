@@ -34,7 +34,6 @@
     <string name="timer_character">Temporizador</string>
 
     <!-- MATAR -->
-    <string name="kill_character">Matar</string>
 
     <!-- POPUP INFO -->
     <string name="show_popup_info">Mostrar Información</string>
@@ -239,5 +238,11 @@
     <string name="open">Abrir</string>
     <string name="delete">Eliminar</string>
     <string name="select_all">Todo</string>
-    <string name="select_none">Ninguno</string>
+    <string name="select_none">Nada</string>
+    <string name="campaign_name_required_title">Nombre de campaña requerido</string>
+    <string name="campaign_name_hint">Nombre de campaña</string>
+    <string name="campaign_saved_success">Campaña guardada exitosamente.</string>
+    <string name="campaign_saved_error">Error al guardar la campaña</string>
+    <string name="campaign_delete_question">¿Está seguro que desea eliminar la/s campaña/s seleccionada/s?</string>
+    <string name="sure_to_restart_question">¿Estás segura de que quieres reiniciar turnos?\\nSolo reiniciará el contador de turnos, no los cambios en las estadísticas.</string>
 </resources>
